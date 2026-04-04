@@ -1,43 +1,24 @@
 <!DOCTYPE html>
-<html lang="bn-BD">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BTCLF NU – সুপ্ত প্রতিভা বিকশিত হোক লেখনীর ধারায়</title>
-    
-    <link rel="stylesheet" id="btclf-style-css" href="/wp-content/themes/btclf/style.css?ver=1.0.0" media="all">
-    <link rel="stylesheet" id="dashicons-css" href="/wp-includes/css/dashicons.min.css?ver=6.9.4" media="all">
-    <link rel="stylesheet" id="font-awesome-css" href="/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0" media="all">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    
+    <title>BTCLF NU</title>
     <link rel="icon" href="/wp-content/uploads/2026/03/cropped-541970920_122170792904547151_8088674487403403961_n-1-32x32.jpg" sizes="32x32">
-    <link rel="icon" href="/wp-content/uploads/2026/03/cropped-541970920_122170792904547151_8088674487403403961_n-1-192x192.jpg" sizes="192x192">
-    <link rel="apple-touch-icon" href="/wp-content/uploads/2026/03/cropped-541970920_122170792904547151_8088674487403403961_n-1-180x180.jpg">
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dashicons/6.2.2/css/dashicons.min.css">
+
     <style>
-        /* Fix Italic Icons Globally */
-        i.fa-solid, i.fa-brands, i.fa-regular, i.fas, i.fab, .dashicons {
-            font-style: normal !important;
-        }
-
-        /* === Premium Grid Calendar Widget Style === */
-        .widget_calendar #wp-calendar { width: 100%; border-collapse: collapse; background: #fff; margin-top: 10px; }
-        .widget_calendar #wp-calendar caption { text-align: center; font-size: 1.1rem; color: #444; margin-bottom: 10px; font-weight: normal; }
-        .widget_calendar #wp-calendar thead th { background-color: #e5e5e5 !important; color: #444 !important; font-weight: normal; text-align: center; padding: 10px 0; border: 1px solid #d4d4d4 !important; }
-        .widget_calendar #wp-calendar tbody td { text-align: center; padding: 10px 0; border: 1px solid #d4d4d4 !important; color: #555; transition: 0.3s; }
-        .widget_calendar #wp-calendar tbody td.pad { background-color: #fafafa; }
-        .widget_calendar #wp-calendar tbody td#today { color: #0000ee !important; text-decoration: underline !important; font-weight: bold; }
-        .widget_calendar #wp-calendar tbody td a { color: #0b3d91; font-weight: bold; text-decoration: none; }
-        .widget_calendar #wp-calendar tbody td a:hover { color: #d82133; }
-        .widget_calendar #wp-calendar tfoot td { border: none !important; padding-top: 15px; padding-bottom: 5px; }
-
         :root {
-            --primary-color: #0b3d91; 
-            --accent-color: #fbd914;  
+            --primary-color: #0b3d91; /* গাঢ় নীল */
+            --accent-color: #fbd914;  /* হলুদ */
             --nav-bg: #ffffff;
             --text-color: #333333;
         }
 
+        /* 1. Custom Font Face */
         @font-face {
             font-family: 'July';
             src: url('/wp-content/themes/btclf/assets/fonts/July-Regular.ttf') format('truetype');
@@ -46,37 +27,37 @@
             font-display: swap;
         }
 
+        /* 2. Apply Font Globally */
         body, h1, h2, h3, h4, h5, h6, p, a, div, li, ul, input, button, textarea, select {
             font-family: 'July', sans-serif !important;
         }
 
+        /* 3. Icon Fixes */
+        i.fa-solid, i.fa-brands, i.fa-regular, i.fas, i.fab, .dashicons { font-style: normal !important; }
         .dashicons, .dashicons-before::before { font-family: 'dashicons' !important; }
-        .fa, .fas, .far, .fal, .fab, i[class*="fa-"] { font-family: "Font Awesome 5 Free", "Font Awesome 6 Free", "FontAwesome" !important; }
 
-        /* Header & Navigation CSS */
+        /* =========================================
+           Header & Navigation CSS
+        ========================================= */
         body { margin: 0; padding: 0; background-color: #f8fafc; }
+        
         .site-header { background-color: var(--nav-bg); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); position: sticky; top: 0; z-index: 999; border-bottom: 3px solid var(--accent-color); }
         .header-container { max-width: 1200px; margin: 0 auto; padding: 0 15px; display: flex; justify-content: space-between; align-items: center; min-height: 80px; }
-        .site-branding { display: flex; align-items: center; }
+        
+        .site-branding display: flex; align-items: center; }
         .site-branding img { max-height: 60px; width: auto; }
         
-        /* Menu CSS */
         .main-navigation { display: flex; align-items: center; }
         .nav-menu { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 5px; }
         .nav-menu li { position: relative; }
         .nav-menu a { color: var(--text-color); text-decoration: none; font-size: 1.1rem; font-weight: bold; padding: 10px 15px; border-radius: 5px; transition: all 0.3s ease; display: block; }
         .nav-menu a:hover, .nav-menu .current-menu-item > a { color: var(--primary-color); background-color: rgba(11, 61, 145, 0.05); }
-        
+
         .menu-toggle { display: none; background: transparent; border: none; color: var(--primary-color); font-size: 30px; cursor: pointer; padding: 5px; }
 
-        @media screen and (max-width: 992px) {
-            .menu-toggle { display: block; }
-            .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 10px 15px rgba(0,0,0,0.1); padding: 15px 0; border-top: 1px solid #eee; }
-            .nav-menu.active { display: flex; }
-            .nav-menu li { width: 100%; }
-        }
-
-        /* === Front Page Layout CSS === */
+        /* =========================================
+           Front Page Layout & Content
+        ========================================= */
         .home-container { display: flex; flex-wrap: wrap; max-width: 1200px; margin: 30px auto; padding: 0 15px; gap: 30px; box-sizing: border-box; }
         .main-content { flex: 1 1 70%; max-width: 70%; min-width: 0; box-sizing: border-box; }
         .sidebar-content { flex: 1 1 25%; max-width: 25%; box-sizing: border-box; }
@@ -88,13 +69,14 @@
         .ticker-text:hover { animation-play-state: paused; cursor: default; }
         @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
 
-        /* Swiper Fixes */
-        .swiper-button-next, .swiper-button-prev { background-color: rgba(11, 61, 145, 0.8) !important; width: 40px !important; height: 40px !important; border-radius: 50% !important; transition: 0.3s !important; box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important; display: flex !important; justify-content: center !important; align-items: center !important; }
+        /* Custom Swiper Arrows */
+        .swiper-button-next, .swiper-button-prev { background-color: rgba(11, 61, 145, 0.8) !important; width: 40px !important; height: 40px !important; border-radius: 50% !important; transition: 0.3s !important; box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important; }
         .swiper-button-next:hover, .swiper-button-prev:hover { background-color: var(--accent-color) !important; transform: scale(1.1) !important; }
-        .swiper-button-next::after, .swiper-button-prev::after { content: none !important; display: none !important; }
-        .swiper-button-next::before { content: ''; width: 16px; height: 16px; background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='9 18 15 12 9 6'%3e%3c/polyline%3e%3c/svg%3e"); background-size: contain; background-repeat: no-repeat; background-position: center; }
-        .swiper-button-prev::before { content: ''; width: 16px; height: 16px; background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='15 18 9 12 15 6'%3e%3c/polyline%3e%3c/svg%3e"); background-size: contain; background-repeat: no-repeat; background-position: center; }
-        .swiper-button-next:hover::before, .swiper-button-prev:hover::before { background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='9 18 15 12 9 6'%3e%3c/polyline%3e%3c/svg%3e") !important; }
+        .swiper-button-next::after, .swiper-button-prev::after { content: none !important; }
+        .swiper-button-next::before { content: ''; width: 16px; height: 16px; background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='9 18 15 12 9 6'%3e%3c/polyline%3e%3c/svg%3e"); background-size: contain; background-repeat: no-repeat; background-position: center; margin-left: 2px; }
+        .swiper-button-prev::before { content: ''; width: 16px; height: 16px; background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='15 18 9 12 15 6'%3e%3c/polyline%3e%3c/svg%3e"); background-size: contain; background-repeat: no-repeat; background-position: center; margin-right: 2px; }
+        .swiper-button-next:hover::before, .swiper-button-prev:hover::before { background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='9 18 15 12 9 6'%3e%3c/polyline%3e%3c/svg%3e"); }
+        
         .swiper-pagination-bullet { background: #ccc; opacity: 1; transition: 0.3s; }
         .swiper-pagination-bullet-active { background: var(--primary-color) !important; width: 20px; border-radius: 10px; }
 
@@ -109,9 +91,11 @@
         .msg-content span { font-size: 0.85rem; color: #64748b; display: block; margin-bottom: 8px; font-weight: bold; }
         .msg-content p { font-size: 0.95rem; color: #475569; margin: 0; line-height: 1.5; font-style: italic; }
         .msg-read-more { font-size: 0.9rem; font-weight: bold; color: var(--primary-color); text-decoration: none; margin-top: 8px; display: inline-block; transition: 0.3s; }
+        .msg-read-more:hover { padding-left: 5px; color: #d82133; }
 
-        .about-org-box { display: flex; background: #fff; border: 1px solid #eaeaea; border-radius: 12px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.02); align-items: center; }
-        .about-logo-wrap { width: 180px; flex-shrink: 0; background: #f8fafc; display: flex; justify-content: center; align-items: center; padding: 20px; align-self: stretch; border-right: 1px solid #eaeaea; }
+        .about-org-box { display: flex; background: #fff; border: 1px solid #eaeaea; border-radius: 12px; overflow: hidden; margin-bottom: 40px; align-items: center; }
+        .about-logo-wrap { width: 180px; flex-shrink: 0; background: #f8fafc; display: flex; justify-content: center; padding: 20px; align-self: stretch; border-right: 1px solid #eaeaea; }
+        .about-logo-wrap img { max-width: 100%; height: auto; object-fit: contain; }
         .about-text { padding: 30px; flex: 1; }
         .about-text h2 { margin: 0 0 15px 0; color: var(--primary-color); font-size: 1.8rem; }
         .about-text p { color: #475569; line-height: 1.7; font-size: 1.05rem; margin-bottom: 20px; }
@@ -119,7 +103,7 @@
 
         .section-title { font-size: 1.6rem; color: var(--primary-color); border-left: 5px solid var(--accent-color); padding-left: 15px; margin: 40px 0 25px 0; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
         .view-all-link { font-size: 1rem; color: #64748b; text-decoration: none; border: 1px solid #cbd5e1; padding: 5px 15px; border-radius: 30px; transition: 0.3s; }
-        .view-all-link:hover { background: var(--primary-color); color: #fff; border-color: var(--primary-color); }
+        .view-all-link:hover { background: var(--primary-color); color: #fff; }
 
         .committee-swiper { padding-bottom: 50px; position: relative; overflow: hidden; width: 100%; box-sizing: border-box; }
         .member-card { background: #fff; border: 1px solid #eaeaea; border-radius: 10px; text-align: center; padding: 25px 15px; transition: 0.3s; box-shadow: 0 3px 8px rgba(0,0,0,0.02); height: 100%; display: block; text-decoration: none; color: inherit; }
@@ -128,75 +112,90 @@
         .member-name { font-size: 1.15rem; font-weight: bold; margin: 0 0 5px 0; color: #111; }
         .member-desig { font-size: 0.9rem; color: #fff; background: var(--primary-color); padding: 3px 10px; border-radius: 20px; display: inline-block; }
         
-        .branch-select { padding: 8px 15px; border-radius: 6px; border: 1px solid #cbd5e1; font-family: 'July', sans-serif; outline: none; font-size: 1rem; cursor: pointer; background: #f8fafc; }
+        .branch-select { padding: 8px 15px; border-radius: 6px; border: 1px solid #cbd5e1; outline: none; font-size: 1rem; cursor: pointer; background: #f8fafc; }
 
+        .advisor-section-wrap { background: #f1f5f9; padding: 20px 15px; border-radius: 12px; margin: 20px 0; border: 1px solid #e2e8f0; }
+        .advisor-card { border: 1px solid #d4d4d4 !important; }
+        .advisor-card:hover { border-color: var(--accent-color) !important; }
+        .advisor-badge { background: #0b3d91; color: #fff; font-size: 0.8rem; padding: 3px 12px; border-radius: 20px; font-weight: bold; margin-top: 10px; display: inline-block; }
+
+        /* Service Box - Updated Bullets */
         .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-bottom: 50px; }
-        .service-box { display: flex; align-items: flex-start; gap: 18px; background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid var(--primary-color); border-radius: 10px; padding: 30px 20px; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.02); }
-        .service-box:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(11, 61, 145, 0.08); border-left-color: var(--accent-color); }
+        .service-box { display: flex; align-items: flex-start; gap: 18px; background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid var(--primary-color); border-radius: 10px; padding: 30px 20px; transition: 0.3s; }
+        .service-box:hover { transform: translateY(-5px); border-left-color: var(--accent-color); box-shadow: 0 10px 25px rgba(11, 61, 145, 0.08); }
         .service-icon-wrap { width: 65px; height: 65px; flex-shrink: 0; background: rgba(11, 61, 145, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px dashed var(--primary-color); }
         .service-icon-wrap img { width: 35px; height: 35px; object-fit: contain; }
-        .service-content { flex-grow: 1; }
         .service-title { font-size: 1.35rem; margin: 0 0 15px 0; font-weight: bold; color: var(--primary-color); border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
         .service-links { list-style: none; padding: 0; margin: 0; }
         
-        /* Updated Service Link Bullets */
-        .service-links li { display: flex; align-items: center; margin-bottom: 10px; font-size: 1.05rem; }
-        .service-links li::before { content: '\00BB'; color: var(--accent-color); font-size: 1.5rem; font-weight: bold; line-height: 1; margin-right: 8px; }
+        .service-links li { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-size: 1.05rem; }
+        .service-links li::before { content: "\00BB"; color: var(--accent-color); font-size: 1.3rem; font-weight: bold; margin-top: -2px; }
         .service-links a { color: #475569; text-decoration: none; transition: 0.2s; font-weight: 500; }
         .service-links a:hover { color: var(--primary-color); padding-left: 5px; }
 
-        .advisor-section-wrap { background: #f1f5f9; padding: 20px 15px; border-radius: 12px; margin: 20px 0; border: 1px solid #e2e8f0; }
-        .advisor-card { background: #fff !important; border: 1px solid #d4d4d4 !important; box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important; padding: 20px 15px !important; }
-        .advisor-card:hover { border-color: var(--accent-color) !important; box-shadow: 0 8px 25px rgba(251, 217, 20, 0.2) !important; }
-        .advisor-badge { background: #0b3d91; color: #fff; font-size: 0.8rem; padding: 3px 12px; border-radius: 20px; font-weight: bold; margin-top: 10px; display: inline-block; }
-
-        /* Sidebar Customization */
+        /* Sidebar CSS */
         .sidebar-right { width: 100%; }
-        .widget { background: #fff; border: 1px solid #eaeaea; border-radius: 12px; padding: 25px 20px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+        .widget { background: #fff; border: 1px solid #eaeaea; border-radius: 12px; padding: 25px 20px; margin-bottom: 30px; }
         .widget-title { font-size: 1.3rem; color: var(--primary-color); border-bottom: 2px solid #f1f5f9; padding-bottom: 12px; margin: 0 0 20px 0; border-left: 4px solid var(--accent-color); padding-left: 12px; font-weight: bold; }
         .founder-box { text-align: center; }
         .founder-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent-color); margin-bottom: 15px; padding: 3px; }
         .founder-text { font-size: 1.05rem; line-height: 1.6; color: #475569; }
+        .fb-page-box { border-radius: 8px; overflow: hidden; border: 1px solid #eaeaea; }
 
-        @media (max-width: 992px) {
-            .main-content, .sidebar-content { flex: 1 1 100%; max-width: 100%; }
-            .service-grid, .message-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 768px) {
-            .service-grid, .message-grid { grid-template-columns: 1fr; }
-            .section-title { flex-direction: column; align-items: flex-start; gap: 10px; }
-            .about-org-box { flex-direction: column; }
-            .about-logo-wrap { width: 100%; border-right: none; border-bottom: 1px solid #eaeaea; padding: 30px 20px; }
-        }
+        /* Calendar Widget */
+        .widget_calendar #wp-calendar { width: 100%; border-collapse: collapse; background: #fff; margin-top: 10px; }
+        .widget_calendar #wp-calendar caption { text-align: center; font-size: 1.1rem; color: #444; margin-bottom: 10px; }
+        .widget_calendar #wp-calendar thead th { background-color: #e5e5e5; color: #444; text-align: center; padding: 10px 0; border: 1px solid #d4d4d4; }
+        .widget_calendar #wp-calendar tbody td { text-align: center; padding: 10px 0; border: 1px solid #d4d4d4; color: #555; }
+        .widget_calendar #wp-calendar tbody td#today { color: #0000ee; text-decoration: underline; font-weight: bold; }
 
-        /* Compact & Clean Footer CSS */
+        /* Footer CSS */
         .site-footer { background: #0f172a; color: #94a3b8; margin-top: 50px; border-top: 4px solid var(--accent-color); }
         .footer-main { padding: 40px 0 30px 0; }
         .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 15px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
         .footer-title { color: #f8fafc; font-size: 1.25rem; margin: 0 0 20px 0; font-weight: bold; position: relative; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .footer-title::after { content: ''; position: absolute; left: 0; bottom: -1px; width: 40px; height: 2px; background: var(--accent-color); }
-        .footer-brand img { max-height: 60px !important; width: auto !important; object-fit: contain; background: #fff; padding: 5px 10px; border-radius: 6px; margin-bottom: 15px; }
-        .footer-desc { font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px; }
+        .footer-brand img { max-height: 60px; width: auto; background: #fff; padding: 5px 10px; border-radius: 6px; margin-bottom: 15px; }
         .footer-links ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
         .footer-links li a { color: #94a3b8; text-decoration: none; font-size: 0.95rem; transition: 0.3s; display: flex; align-items: center; gap: 8px; }
+        .footer-links li a::before { content: '»'; color: var(--accent-color); font-size: 18px; font-weight: bold; }
         .footer-links li a:hover { color: #fff; transform: translateX(5px); }
         .footer-contact-list { list-style: none; padding: 0; margin: 0; }
         .footer-contact-list li { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; font-size: 0.95rem; }
-        .fc-icon { width: 36px; height: 36px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--accent-color); font-size: 16px; transition: 0.3s; }
-        .footer-contact-list a { color: #94a3b8; text-decoration: none; }
-        .footer-contact-list li:hover .fc-icon { background: var(--accent-color); color: #000; transform: scale(1.1); }
+        .fc-icon { width: 36px; height: 36px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--accent-color); transition: 0.3s; }
+        .footer-contact-list a { color: #94a3b8; text-decoration: none; transition: 0.3s; }
+        .footer-contact-list a:hover { color: #fff; }
         .footer-bottom { background: #020617; padding: 15px 0; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); }
         .footer-bottom-inner { max-width: 1200px; margin: 0 auto; padding: 0 15px; display: flex; justify-content: space-between; align-items: center; }
-        .footer-bottom a { color: #fff; font-weight: bold; text-decoration: none; }
+        .footer-bottom a { color: #fff; text-decoration: none; }
+
+        @media (max-width: 992px) {
+            .menu-toggle { display: block; }
+            .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 10px 15px rgba(0,0,0,0.1); padding: 15px 0; }
+            .nav-menu.active { display: flex; }
+            .main-content, .sidebar-content { flex: 1 1 100%; max-width: 100%; }
+            .service-grid, .message-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-container { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .service-grid, .message-grid { grid-template-columns: 1fr; }
+            .section-title { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .about-org-box { flex-direction: column; }
+            .about-logo-wrap { width: 100%; border-right: none; border-bottom: 1px solid #eaeaea; }
+            .footer-container { grid-template-columns: 1fr; text-align: center; }
+            .footer-links, .footer-title { display: none; }
+            .footer-contact-list { display: flex; justify-content: center; gap: 20px; }
+            .footer-contact-list li .fc-text { display: none; }
+            .footer-bottom-inner { flex-direction: column; gap: 10px; }
+        }
     </style>
 </head>
 
 <body>
-
 <header class="site-header">
     <div class="header-container">
         <div class="site-branding">
-            <a href="/" class="custom-logo-link"><img src="/wp-content/uploads/2026/03/cropped-541970920_122170792904547151_8088674487403403961_n.jpg" class="custom-logo" alt="BTCLF NU"></a>
+            <a href="/"><img src="/wp-content/uploads/2026/03/cropped-541970920_122170792904547151_8088674487403403961_n.jpg" alt="BTCLF NU"></a>
         </div>
         <nav class="main-navigation">
             <button class="menu-toggle" id="mobile-menu-btn">
@@ -214,321 +213,385 @@
     </div>
 </header>
 
-<div id="content" class="site-content">
-    <div class="home-container">
-        <main class="main-content">
-            
-            <div class="news-ticker">
-                <div class="ticker-title"><span class="dashicons dashicons-megaphone" style="margin-right:8px;"></span> আপডেট</div>
-                <div class="ticker-content">
-                    <div class="ticker-text">ওয়েবসাইটটির উন্নয়ন কাজ চলমান</div>
-                </div>
-            </div>
-            
-            <div class="swiper heroSwiper hero-slider-wrap">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="https://networknewsbd.com/btclfnu/wp-content/uploads/2026/03/IMG20250214131038-scaled.jpg" class="hero-slide-img"></div>
-                    <div class="swiper-slide"><img src="https://networknewsbd.com/btclfnu/wp-content/uploads/2026/03/IMG_20240119_144353-scaled.jpg" class="hero-slide-img"></div>
-                    <div class="swiper-slide"><img src="https://networknewsbd.com/btclfnu/wp-content/uploads/2026/03/IMG-20241006-WA0022.jpg" class="hero-slide-img"></div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-
-            <div class="message-grid">
-                <div class="msg-card">
-                    <img src="/wp-content/uploads/2026/03/%E0%A6%B9%E0%A7%81%E0%A6%AE%E0%A6%BE%E0%A6%87%E0%A6%B0%E0%A6%BE-%E0%A6%96%E0%A6%BE%E0%A6%A8%E0%A6%AE-%E0%A6%9C%E0%A7%87%E0%A6%B0%E0%A7%80%E0%A6%A8.jpg" class="msg-img" onerror="this.src='https://via.placeholder.com/80';">
-                    <div class="msg-content">
-                        <h4>হুমাইরা খানম জেরীন</h4>
-                        <span>সভাপতি</span>
-                        <p>"জাতীয় বিশ্ববিদ্যালয়ের সকল শিক্ষার্থীকে আমার আন্তরিক শুভেচ্ছা। আমাদের চারপাশে এমন অনেক তরুণ আছেন যারা চমৎকার..."</p>
-                        <a href="/president-message" class="msg-read-more">বিস্তারিত পড়ুন »</a>
-                    </div>
-                </div>
-                <div class="msg-card">
-                    <img src="/wp-content/uploads/2026/03/IMG_20260301_230206_019-133.webp" class="msg-img" onerror="this.src='https://via.placeholder.com/80';">
-                    <div class="msg-content">
-                        <h4>তারেক আল মুনতাছির</h4>
-                        <span>সাধারণ সম্পাদক</span>
-                        <p>"সবাইকে আন্তরিক অভিনন্দন। বাংলাদেশ তরুণ কলাম লেখক ফোরাম সারা বছর ধরেই নতুন ও নিয়মিত লেখকদের..."</p>
-                        <a href="/secretary-message" class="msg-read-more">বিস্তারিত পড়ুন »</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="about-org-box">
-                <div class="about-logo-wrap">
-                    <img src="/wp-content/uploads/2026/03/cropped-541970920_122170792904547151_8088674487403403961_n.jpg" alt="BTCLF NU">
-                </div>
-                <div class="about-text">
-                    <h2>বাংলাদেশ তরুণ কলাম লেখক ফোরাম</h2>
-                    <h3>জাতীয় বিশ্ববিদ্যালয় শাখা</h3>
-                    <p>আমাদের সংগঠন দেশের তরুণ লেখকদের সৃজনশীলতা বিকাশের একটি বিশ্বস্ত প্ল্যাটফর্ম। ২০১৮ সাল থেকে আমরা দেশের বিভিন্ন বিশ্ববিদ্যালয়ে শাখা স্থাপনের মাধ্যমে তরুণদের লেখালেখিতে উদ্বুদ্ধ করে আসছি।</p>
-                    <a href="/about" class="btn-read-more">বিস্তারিত পড়ুন »</a>
-                </div>
-            </div>
-
-            <h2 class="section-title">
-                কার্যনির্বাহী পর্ষদ
-                <a href="/full-committee/" class="view-all-link">পূর্ণাঙ্গ কমিটি</a>
-            </h2>
-
-            <div class="swiper committeeSwiper committee-swiper" style="margin-bottom:40px;">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#" class="member-card">
-                            <img src="https://networknewsbd.com/nu/nu_president.jpg" class="member-img">
-                            <h4 class="member-name">হুমাইরা খানম জেরীন</h4>
-                            <div class="member-desig">সভাপতি</div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="member-card">
-                            <img src="/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-26-at-11.19.45-PM.jpeg" class="member-img">
-                            <h4 class="member-name">তপন কুমার ঘোষ</h4>
-                            <div class="member-desig">সহ-সভাপতি</div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="member-card">
-                            <img src="/wp-content/uploads/2026/03/IMG_20260301_230206_019-133.webp" class="member-img">
-                            <h4 class="member-name">তারেক আল মুনতাছির</h4>
-                            <div class="member-desig">সাধারণ সম্পাদক</div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="member-card">
-                            <img src="https://networknewsbd.com/nu/org.jpg" class="member-img">
-                            <h4 class="member-name">মোঃ হাসনাইন রিজেন</h4>
-                            <div class="member-desig">সাংগঠনিক সম্পাদক</div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="#" class="member-card">
-                            <img src="https://networknewsbd.com/nu/org_2.jpg" class="member-img">
-                            <h4 class="member-name">উম্মে সালমা</h4>
-                            <div class="member-desig">সহ-সাংগঠনিক সম্পাদক</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
-            </div>
-
-            <div class="advisor-section-wrap">
-                <h2 class="section-title" style="margin-top: 0;">আমাদের উপদেষ্টামণ্ডলী</h2>
-                <div class="swiper advisorSwiper committee-swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="member-card advisor-card">
-                                <img src="https://networknewsbd.com/nu/advisor_1.jpg" class="member-img">
-                                <h4 class="member-name">প্রফেসর ড. মালেকা বিলকিস</h4>
-                                <div class="advisor-badge">উপদেষ্টা</div>
-                                <p style="font-size: 0.85rem; color: #64748b; margin-top: 8px;"><strong>সাবেক অধ্যক্ষ</strong><br>মুমিনুন্নিসা সরকারি মহিলা কলেজ</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="member-card advisor-card">
-                                <img src="https://networknewsbd.com/nu/advisor_2.jpg" class="member-img">
-                                <h4 class="member-name">আজহার মাহমুদ</h4>
-                                <div class="advisor-badge">উপদেষ্টা</div>
-                                <p style="font-size: 0.85rem; color: #64748b; margin-top: 8px;"><strong>মাল্টিমিডিয়া জার্নালিস্ট</strong><br>প্রতিদিনের বাংলাদেশ</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="member-card advisor-card">
-                                <img src="https://networknewsbd.com/nu/advisor_3.jpg" class="member-img">
-                                <h4 class="member-name">ইসরাত জাহান</h4>
-                                <div class="advisor-badge">উপদেষ্টা</div>
-                                <p style="font-size: 0.85rem; color: #64748b; margin-top: 8px;"><strong>সাবেক সাধারণ সম্পাদক</strong><br>জাতীয় বিশ্ববিদ্যালয় শাখা</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="member-card advisor-card">
-                                <img src="/wp-content/uploads/2026/03/ru.webp" class="member-img">
-                                <h4 class="member-name">মোহাম্মদ রায়হান উদ্দিন</h4>
-                                <div class="advisor-badge">উপদেষ্টা</div>
-                                <p style="font-size: 0.85rem; color: #64748b; margin-top: 8px;"><strong>সাবেক সভাপতি</strong><br>জাতীয় বিশ্ববিদ্যালয় শাখা</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
-                </div>
-            </div>
-
-            <h2 class="section-title">
-                টিম লিডার
-                <select id="branchSelector" class="branch-select" onchange="showBranchGroup(this.value)">
-                    <option value="team-ichamati">ইছামতী</option>
-                    <option value="team-karnafuli">কর্ণফুলী</option>
-                    <option value="team-surma">সুরমা</option>
-                    <option value="team-halda">হালদা</option>
-                    <option value="team-padma">পদ্মা</option>
-                    <option value="team-brahmaputra">ব্রহ্মপুত্র</option>
-                    <option value="team-kirtankhola">কীর্তনখোলা</option>
-                    <option value="team-karatoya">করতোয়া</option>
-                </select>
-            </h2>
-            
-            <div id="team-ichamati" class="swiper branchSwiper committee-swiper branch-group" style="display: block;">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#" class="member-card">
-                            <img src="https://networknewsbd.com/nu/org.jpg" class="member-img">
-                            <h4 class="member-name">মোঃ হাসনাইন রিজেন</h4>
-                            <div class="member-desig">টিম লিডার</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
-            </div>
-            <div id="team-karnafuli" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="#" class="member-card">
-                            <img src="https://networknewsbd.com/nu/finance.jpg" class="member-img">
-                            <h4 class="member-name">কাজী মালিহা আকতার</h4>
-                            <div class="member-desig">টিম লিডার</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
-            </div>
-            <div class="service-grid">
-                <div class="service-box">
-                    <div class="service-icon-wrap"><img src="https://networknewsbd.com/nu/box_1.png"></div>
-                    <div class="service-content">
-                        <h3 class="service-title">ডাউনলোড</h3>
-                        <ul class="service-links">
-                            <li><a href="https://networknewsbd.com/nu/Calendar_2026.pdf">ক্যালেন্ডার</a></li>
-                            <li><a href="https://networknewsbd.com/nu/btclf_nu_admission-form.pdf">সদস্য আবেদন ফরম</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-box">
-                    <div class="service-icon-wrap"><img src="https://networknewsbd.com/nu/box_2.png"></div>
-                    <div class="service-content">
-                        <h3 class="service-title">মিডিয়া হাব</h3>
-                        <ul class="service-links">
-                            <li><a href="https://networknewsbd.com/media-hub/">পত্রপত্রিকা</a></li>
-                            <li><a href="https://networknewsbd.com/contact-directory/">কন্টাক্ট ডিরেক্টরি</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service-box">
-                    <div class="service-icon-wrap"><img src="https://networknewsbd.com/nu/box_3.png"></div>
-                    <div class="service-content">
-                        <h3 class="service-title">প্রকাশনা</h3>
-                        <ul class="service-links">
-                            <li><a href="#">বার্ষিক প্রতিবেদন</a></li>
-                            <li><a href="#">তারুণ্যের কলম</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </main>
+<div class="home-container">
+    <main class="main-content">
         
-        <aside class="sidebar-content">
-            <aside id="secondary" class="widget-area sidebar-right">
-                <section class="widget founder-widget">
-                    <h3 class="widget-title">প্রতিষ্ঠাতা</h3>
-                    <div class="founder-box">
-                        <img src="https://networknewsbd.com/nu/founder.jpg" alt="প্রতিষ্ঠাতা" class="founder-img" onerror="this.src='https://via.placeholder.com/150';">
-                        <div class="founder-text"><p>জাহানুর ইসলাম</p></div>
-                    </div>
-                </section>
+        <div class="news-ticker">
+            <div class="ticker-title"><span class="dashicons dashicons-megaphone" style="margin-right:8px;"></span> আপডেট</div>
+            <div class="ticker-content">
+                <div class="ticker-text">ওয়েবসাইটটির উন্নয়ন কাজ চলমান</div>
+            </div>
+        </div>
+        
+        <div class="swiper heroSwiper hero-slider-wrap">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://networknewsbd.com/btclfnu/wp-content/uploads/2026/03/IMG20250214131038-scaled.jpg" class="hero-slide-img"></div>
+                <div class="swiper-slide"><img src="https://networknewsbd.com/btclfnu/wp-content/uploads/2026/03/IMG_20240119_144353-scaled.jpg" class="hero-slide-img"></div>
+                <div class="swiper-slide"><img src="https://networknewsbd.com/btclfnu/wp-content/uploads/2026/03/IMG-20241006-WA0022.jpg" class="hero-slide-img"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
 
-                <section class="widget fb-widget">
-                    <h3 class="widget-title"><span class="dashicons dashicons-facebook-alt" style="margin-top: 2px;"></span> ফেসবুকে আমরা</h3>
-                    <div class="fb-page-box">
-                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fbtclf.nu&amp;tabs=timeline&amp;width=340&amp;height=400&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId" width="100%" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0"></iframe>
-                    </div>
-                </section>
-
-                <section id="media_image-2" class="widget widget_media_image">
-                    <h3 class="widget-title">মাসিক সেরা লেখক</h3>
-                    <img width="300" height="300" src="/wp-content/uploads/2026/03/feb-bw-300x300.jpg" alt="সেরা লেখক" style="max-width: 100%; height: auto;">
-                </section>
-                
-                <section id="calendar-2" class="widget widget_calendar">
-                    <h3 class="widget-title">ক্যালেন্ডার</h3>
-                    <div id="calendar_wrap" class="calendar_wrap">
-                        <table id="wp-calendar" class="wp-calendar-table">
-                            <caption>April 2026</caption>
-                            <thead><tr><th>S</th><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th></tr></thead>
-                            <tbody>
-                                <tr><td colspan="4" class="pad"></td><td>1</td><td>2</td><td>3</td></tr>
-                                <tr><td id="today">4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-                                <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
-                                <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
-                                <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td class="pad"></td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-            </aside>
-        </aside>
-    </div>
-
-    <footer id="colophon" class="site-footer">
-        <div class="footer-main">
-            <div class="footer-container">
-                <div class="footer-brand">
-                    <img src="/wp-content/uploads/2026/03/cropped-541970920_122170792904547151_8088674487403403961_n.jpg" alt="BTCLF NU">
-                    <p class="footer-desc">সুপ্ত প্রতিভা বিকশিত হোক লেখনীর ধারায়</p>
+        <div class="message-grid">
+            <div class="msg-card">
+                <img src="/wp-content/uploads/2026/03/%E0%A6%B9%E0%A7%81%E0%A6%AE%E0%A6%BE%E0%A6%87%E0%A6%B0%E0%A6%BE-%E0%A6%96%E0%A6%BE%E0%A6%A8%E0%A6%AE-%E0%A6%9C%E0%A7%87%E0%A6%B0%E0%A7%80%E0%A6%A8.jpg" class="msg-img">
+                <div class="msg-content">
+                    <h4>হুমাইরা খানম জেরীন</h4>
+                    <span>সভাপতি</span>
+                    <p>"জাতীয় বিশ্ববিদ্যালয়ের সকল শিক্ষার্থীকে আমার আন্তরিক শুভেচ্ছা। আমাদের চারপাশে এমন অনেক তরুণ আছেন যারা চমৎকার..."</p>
+                    <a href="/president-message" class="msg-read-more">বিস্তারিত পড়ুন »</a>
                 </div>
-                <div class="footer-links">
-                    <h4 class="footer-title">প্রয়োজনীয় লিংক</h4>
-                    <ul>
-                        <li><a href="/president-message">সভাপতির বাণী</a></li>
-                        <li><a href="/secretary-message">সম্পাদকের বাণী</a></li>
-                        <li><a href="/full-committee">কার্যনির্বাহী পর্ষদ</a></li>
-                        <li><a href="/about">আমাদের সম্পর্কে</a></li>
-                        <li><a href="/contact">যোগাযোগ</a></li>
+            </div>
+            <div class="msg-card">
+                <img src="/wp-content/uploads/2026/03/IMG_20260301_230206_019-133.webp" class="msg-img">
+                <div class="msg-content">
+                    <h4>তারেক আল মুনতাছির</h4>
+                    <span>সাধারণ সম্পাদক</span>
+                    <p>"সবাইকে আন্তরিক অভিনন্দন। বাংলাদেশ তরুণ কলাম লেখক ফোরাম সারা বছর ধরেই নতুন ও নিয়মিত লেখকদের..."</p>
+                    <a href="/secretary-message" class="msg-read-more">বিস্তারিত পড়ুন »</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-org-box">
+            <div class="about-logo-wrap">
+                <img src="/wp-content/uploads/2026/03/cropped-541970920_122170792904547151_8088674487403403961_n.jpg" alt="BTCLF NU">
+            </div>
+            <div class="about-text">
+                <h2>বাংলাদেশ তরুণ কলাম লেখক ফোরাম</h2>
+                <h3>জাতীয় বিশ্ববিদ্যালয় শাখা</h3>
+                <p>আমাদের সংগঠন দেশের তরুণ লেখকদের সৃজনশীলতা বিকাশের একটি বিশ্বস্ত প্ল্যাটফর্ম। ২০১৮ সাল থেকে আমরা দেশের বিভিন্ন বিশ্ববিদ্যালয়ে শাখা স্থাপনের মাধ্যমে তরুণদের লেখালেখিতে উদ্বুদ্ধ করে আসছি।</p>
+                <a href="/about" class="btn-read-more">বিস্তারিত পড়ুন »</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">কার্যনির্বাহী পর্ষদ <a href="/full-committee/" class="view-all-link">পূর্ণাঙ্গ কমিটি</a></h2>
+        <div class="swiper committeeSwiper committee-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="https://bycwf.org/author/jerin-jj98989874/" class="member-card">
+                        <img src="https://networknewsbd.com/nu/nu_president.jpg" class="member-img">
+                        <h4 class="member-name">হুমাইরা খানম জেরীন</h4>
+                        <div class="member-desig">সভাপতি</div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://bycwf.org/author/taponghosh960/" class="member-card">
+                        <img src="/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-26-at-11.19.45-PM.jpeg" class="member-img">
+                        <h4 class="member-name">তপন কুমার ঘোষ</h4>
+                        <div class="member-desig">সহ-সভাপতি</div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://bycwf.org/author/tarekalmuntasir/" class="member-card">
+                        <img src="/wp-content/uploads/2026/03/IMG_20260301_230206_019-133.webp" class="member-img">
+                        <h4 class="member-name">তারেক আল মুনতাছির</h4>
+                        <div class="member-desig">সাধারণ সম্পাদক</div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://bycwf.org/author/hasnineoffical2002/" class="member-card">
+                        <img src="https://networknewsbd.com/nu/org.jpg" class="member-img">
+                        <h4 class="member-name">মোঃ হাসনাইন রিজেন</h4>
+                        <div class="member-desig">সাংগঠনিক সম্পাদক</div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://bycwf.org/author/ummetoha3325/" class="member-card">
+                        <img src="https://networknewsbd.com/nu/org_2.jpg" class="member-img">
+                        <h4 class="member-name">উম্মে সালমা</h4>
+                        <div class="member-desig">সহ-সাংগঠনিক সম্পাদক</div>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+        </div>
+
+        <div class="advisor-section-wrap">
+            <h2 class="section-title" style="margin-top: 0;">আমাদের উপদেষ্টামণ্ডলী</h2>
+            <div class="swiper advisorSwiper committee-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="member-card advisor-card">
+                            <img src="https://networknewsbd.com/nu/advisor_1.jpg" class="member-img">
+                            <h4 class="member-name">প্রফেসর ড. মালেকা বিলকিস</h4>
+                            <div class="advisor-badge">উপদেষ্টা</div>
+                            <p style="font-size: 0.85rem; color: #64748b; margin-top: 8px;"><strong>সাবেক অধ্যক্ষ</strong><br>মুমিনুন্নিসা সরকারি মহিলা কলেজ, ময়মনসিংহ</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="member-card advisor-card">
+                            <img src="https://networknewsbd.com/nu/advisor_2.jpg" class="member-img">
+                            <h4 class="member-name">আজহার মাহমুদ</h4>
+                            <div class="advisor-badge">উপদেষ্টা</div>
+                            <p style="font-size: 0.85rem; color: #64748b; margin-top: 8px;"><strong>মাল্টিমিডিয়া জার্নালিস্ট</strong><br>প্রতিদিনের বাংলাদেশ</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="member-card advisor-card">
+                            <img src="https://networknewsbd.com/nu/advisor_3.jpg" class="member-img">
+                            <h4 class="member-name">ইসরাত জাহান</h4>
+                            <div class="advisor-badge">উপদেষ্টা</div>
+                            <p style="font-size: 0.85rem; color: #64748b; margin-top: 8px;"><strong>সাবেক সাধারণ সম্পাদক</strong><br>জাতীয় বিশ্ববিদ্যালয় শাখা</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="member-card advisor-card">
+                            <img src="/wp-content/uploads/2026/03/ru.webp" class="member-img">
+                            <h4 class="member-name">মোহাম্মদ রায়হান উদ্দিন ছিদ্দীকি</h4>
+                            <div class="advisor-badge">উপদেষ্টা</div>
+                            <p style="font-size: 0.85rem; color: #64748b; margin-top: 8px;"><strong>সাবেক সভাপতি</strong><br>জাতীয় বিশ্ববিদ্যালয় শাখা</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <h2 class="section-title">টিম লিডার 
+            <select id="branchSelector" class="branch-select" onchange="showBranchGroup(this.value)">
+                <option value="team-ichamati">ইছামতী</option>
+                <option value="team-karnafuli">কর্ণফুলী</option>
+                <option value="team-surma">সুরমা</option>
+                <option value="team-halda">হালদা</option>
+                <option value="team-padma">পদ্মা</option>
+            </select>
+        </h2>
+        
+        <div id="team-ichamati" class="swiper branchSwiper committee-swiper branch-group" style="display: block;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#" class="member-card">
+                        <img src="https://networknewsbd.com/nu/org.jpg" class="member-img">
+                        <h4 class="member-name">মোঃ হাসনাইন রিজেন</h4>
+                        <div class="member-desig">টিম লিডার</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="team-karnafuli" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#" class="member-card">
+                        <img src="https://networknewsbd.com/nu/finance.jpg" class="member-img">
+                        <h4 class="member-name">কাজী মালিহা আকতার</h4>
+                        <div class="member-desig">টিম লিডার</div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#" class="member-card">
+                        <img src="https://networknewsbd.com/nu/executive.jpg" class="member-img">
+                        <h4 class="member-name">তাসনিয়া তাবাচ্ছুম</h4>
+                        <div class="member-desig">উপ টিম লিডার</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="team-surma" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#" class="member-card">
+                        <img src="https://networknewsbd.com/nu/training.jpg" class="member-img">
+                        <h4 class="member-name">নাইমা খাতুন</h4>
+                        <div class="member-desig">টিম লিডার</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="team-halda" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#" class="member-card">
+                        <img src="https://networknewsbd.com/nu/office.jpg" class="member-img">
+                        <h4 class="member-name">নুসরাত জাহান জেরিন</h4>
+                        <div class="member-desig">টিম লিডার</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="team-padma" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#" class="member-card">
+                        <img src="/wp-content/uploads/2026/03/IMG_20251031_140436-69b4751600116-1773434134-scaled-1.webp" class="member-img">
+                        <h4 class="member-name">শামীম আহম্মেদ</h4>
+                        <div class="member-desig">টিম লিডার</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="service-grid">
+            <div class="service-box">
+                <div class="service-icon-wrap"><img src="https://networknewsbd.com/nu/box_1.png"></div>
+                <div class="service-content">
+                    <h3 class="service-title">ডাউনলোড</h3>
+                    <ul class="service-links">
+                        <li><a href="#">ক্যালেন্ডার</a></li>
+                        <li><a href="#">সদস্য আবেদন ফরম</a></li>
                     </ul>
                 </div>
-                <div class="footer-contact">
-                    <h4 class="footer-title">যুক্ত থাকুন</h4>
-                    <ul class="footer-contact-list">
-                        <li>
-                            <a href="https://web.facebook.com/btclf.nu" target="_blank">
-                                <div class="fc-icon"><i class="fa-brands fa-facebook-f"></i></div>
-                                <div class="fc-text">ফেসবুক পেজ</div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tel:01886252507">
-                                <div class="fc-icon"><i class="fa-solid fa-phone"></i></div>
-                                <div class="fc-text">01886252507</div>
-                            </a>
-                        </li>
+            </div>
+            <div class="service-box">
+                <div class="service-icon-wrap"><img src="https://networknewsbd.com/nu/box_2.png"></div>
+                <div class="service-content">
+                    <h3 class="service-title">মিডিয়া হাব</h3>
+                    <ul class="service-links">
+                        <li><a href="#">পত্রপত্রিকা</a></li>
+                        <li><a href="#">কন্টাক্ট ডিরেক্টরি</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-icon-wrap"><img src="https://networknewsbd.com/nu/box_3.png"></div>
+                <div class="service-content">
+                    <h3 class="service-title">প্রকাশনা</h3>
+                    <ul class="service-links">
+                        <li><a href="#">বার্ষিক প্রতিবেদন</a></li>
+                        <li><a href="#">তারুণ্যের কলম</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-icon-wrap"><img src="https://networknewsbd.com/nu/nu.png"></div>
+                <div class="service-content">
+                    <h3 class="service-title">ক্যাম্পাস</h3>
+                    <ul class="service-links">
+                        <li><a href="#">ফলাফল</a></li>
+                        <li><a href="#">NU EMS</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-icon-wrap"><img src="https://networknewsbd.com/nu/box_5.png"></div>
+                <div class="service-content">
+                    <h3 class="service-title">সহায়ক লিংক</h3>
+                    <ul class="service-links">
+                        <li><a href="#">কেন্দ্রীয় পোর্টাল</a></li>
+                        <li><a href="#">জাতীয় তথ্য বাতায়ন</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-box">
+                <div class="service-icon-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"></div>
+                <div class="service-content">
+                    <h3 class="service-title">সোস্যাল মিডিয়া</h3>
+                    <ul class="service-links">
+                        <li><a href="#">ফেসবুক পেজ</a></li>
+                        <li><a href="#">ফেসবুক গ্রুপ</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="footer-bottom-inner">
-                <p>© 2026 <a href="/">BTCLF NU</a>. সর্বস্বত্ব সংরক্ষিত।</p>
-                <p class="dev-credit" style="color:#64748b;">Developed by RJ Tanjid</p>
+    </main>
+
+    <aside class="sidebar-content">
+        <section class="widget founder-widget">
+            <h3 class="widget-title">প্রতিষ্ঠাতা</h3>
+            <div class="founder-box">
+                <img src="https://networknewsbd.com/nu/founder.jpg" alt="প্রতিষ্ঠাতা" class="founder-img">
+                <div class="founder-text"><p>জাহানুর ইসলাম</p></div>
             </div>
-        </div>
-    </footer>
+        </section>
+
+        <section class="widget fb-widget">
+            <h3 class="widget-title"><span class="dashicons dashicons-facebook-alt" style="margin-top: 2px;"></span> ফেসবুকে আমরা</h3>
+            <div class="fb-page-box">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fbtclf.nu&tabs=timeline&width=340&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+        </section>
+
+        <section class="widget widget_media_image">
+            <h3 class="widget-title">মাসিক সেরা লেখক</h3>
+            <a href="#"><img src="/wp-content/uploads/2026/03/feb-bw-300x300.jpg" style="max-width: 100%; height: auto;" alt=""></a>
+        </section>
+
+        <section class="widget widget_calendar">
+            <h3 class="widget-title">ক্যালেন্ডার</h3>
+            <table id="wp-calendar">
+                <caption>April 2026</caption>
+                <thead>
+                    <tr><th>S</th><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="4" class="pad"> </td><td>1</td><td>2</td><td>3</td></tr>
+                    <tr><td id="today">4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+                    <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+                    <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+                    <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td class="pad"> </td></tr>
+                </tbody>
+            </table>
+        </section>
+    </aside>
 </div>
 
+<footer class="site-footer">
+    <div class="footer-main">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="/"><img src="/wp-content/uploads/2026/03/cropped-541970920_122170792904547151_8088674487403403961_n.jpg" alt="BTCLF NU"></a>
+                <p class="footer-desc">সুপ্ত প্রতিভা বিকশিত হোক লেখনীর ধারায়</p>
+            </div>
+            <div class="footer-links">
+                <h4 class="footer-title">প্রয়োজনীয় লিংক</h4>
+                <ul>
+                    <li><a href="#">সভাপতির বাণী</a></li>
+                    <li><a href="#">সম্পাদকের বাণী</a></li>
+                    <li><a href="#">কার্যনির্বাহী পর্ষদ</a></li>
+                    <li><a href="#">আর্কাইভ</a></li>
+                    <li><a href="#">আমাদের সম্পর্কে</a></li>
+                    <li><a href="#">যোগাযোগ</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4 class="footer-title">যুক্ত থাকুন</h4>
+                <ul class="footer-contact-list">
+                    <li>
+                        <a href="https://web.facebook.com/btclf.nu" target="_blank" style="display:flex; align-items:center; gap:12px;">
+                            <div class="fc-icon"><i class="fa-brands fa-facebook-f"></i></div>
+                            <div class="fc-text"><span style="display:block; font-size:0.8rem; color:#64748b;">অফিসিয়াল পেজ</span>ফেসবুকে যুক্ত হোন</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:01886252507" style="display:flex; align-items:center; gap:12px;">
+                            <div class="fc-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="fc-text"><span style="display:block; font-size:0.8rem; color:#64748b;">যোগাযোগ করুন</span>01886252507</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+            <p>© 2026 <a href="/">BTCLF NU</a>. সর্বস্বত্ব সংরক্ষিত।</p>
+            <p class="dev-credit" style="color:#64748b;">Developed by <a href="#" style="color:#64748b; font-weight:normal;">RJ Tanjid</a></p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
+        
+        // Mobile Menu Toggle
         const menuBtn = document.getElementById("mobile-menu-btn");
         const navMenu = document.querySelector(".nav-menu");
-
-        menuBtn.addEventListener("click", function() {
-            navMenu.classList.toggle("active");
-            const icon = menuBtn.querySelector('.dashicons');
-            if(navMenu.classList.contains('active')) {
-                icon.classList.replace('dashicons-menu-alt3', 'dashicons-no-alt');
-            } else {
-                icon.classList.replace('dashicons-no-alt', 'dashicons-menu-alt3');
-            }
-        });
+        if(menuBtn) {
+            menuBtn.addEventListener("click", function() {
+                navMenu.classList.toggle("active");
+                const icon = menuBtn.querySelector('.dashicons');
+                if(navMenu.classList.contains('active')) {
+                    icon.classList.remove('dashicons-menu-alt3');
+                    icon.classList.add('dashicons-no-alt');
+                } else {
+                    icon.classList.remove('dashicons-no-alt');
+                    icon.classList.add('dashicons-menu-alt3');
+                }
+            });
+        }
 
         // Initialize Swipers
         new Swiper(".heroSwiper", {
@@ -538,38 +601,33 @@
         });
 
         var committeeOptions = {
-            slidesPerView: 1, spaceBetween: 20,
+            slidesPerView: 1, 
+            spaceBetween: 20,
+            observer: true,       // Important to fix slider inside display:none elements
+            observeParents: true,
             navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-            pagination: { el: ".swiper-pagination", clickable: true, dynamicBullets: true },
-            breakpoints: { 576: { slidesPerView: 2 }, 768: { slidesPerView: 3 }, 1024: { slidesPerView: 4 } }
+            breakpoints: { 
+                576: { slidesPerView: 2 }, 
+                768: { slidesPerView: 3 },
+                1024: { slidesPerView: 4 } // Show 4 on desktop
+            }
         };
+
         new Swiper(".committeeSwiper", committeeOptions);
+        new Swiper(".advisorSwiper", committeeOptions);
         
         var branchSwipers = document.querySelectorAll('.branchSwiper');
         branchSwipers.forEach(function(el) {
             new Swiper(el, committeeOptions);
         });
-
-        new Swiper(".advisorSwiper", {
-            slidesPerView: 1, spaceBetween: 20,
-            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-            breakpoints: { 576: { slidesPerView: 2 }, 768: { slidesPerView: 3 }, 992: { slidesPerView: 4 } }
-        });
     });
 
-    // Team Leader Filter Script with Layout Update Fix
+    // Team Leader Filter functionality
     function showBranchGroup(teamId) {
-        var groups = document.querySelectorAll('.branch-group');
-        groups.forEach(function(group) {
+        document.querySelectorAll('.branch-group').forEach(function(group) {
             group.style.display = 'none';
         });
-        var activeGroup = document.getElementById(teamId);
-        activeGroup.style.display = 'block';
-        
-        // Force Swiper to recalculate layout after changing display:block
-        if(activeGroup.swiper) {
-            activeGroup.swiper.update();
-        }
+        document.getElementById(teamId).style.display = 'block';
     }
 </script>
 </body>
