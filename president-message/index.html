@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dashicons/6.2.2/css/dashicons.min.css">
     <link rel="preload" href="https://rjtanjid24.github.io/btclfnu/assets/fonts/July-Regular.ttf" as="font" type="font/ttf" crossorigin>
-
+<base href="http://btclfnu.pro.bd/">
     <style>
         :root {
             --primary-color: #0b3d91; 
@@ -21,7 +21,7 @@
         /* 1. Custom Font Face */
         @font-face {
             font-family: 'July';
-            src: url('https://rjtanjid24.github.io/btclfnu/assets/fonts/July-Regular.ttf') format('truetype');
+            src: url('/assets/fonts/July-Regular.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
             font-display: swap;
@@ -138,14 +138,14 @@
         </div>
         <nav class="main-navigation">
             <button class="menu-toggle" id="mobile-menu-btn">
-                <span class="dashicons dashicons-menu-alt3" style="font-size: 30px; width: 30px; height: 30px;"></span>
-            </button>
+    <i class="fa-solid fa-bars" style="font-size: 28px;"></i>
+</button>
             <ul class="nav-menu">
                 <li><a href="/">হোম</a></li>
                 <li><a href="/about/">আমাদের সম্পর্কে</a></li>
                 <li><a href="/authors/">লেখক কর্ণার</a></li>
                 <li><a href="/full-committee/">কার্যনির্বাহী কমিটি</a></li>
-                <li><a href="/events/">ইভেন্টস</a></li>
+                <li><a href="/frame/">ফ্রেম</a></li>
                 <li><a href="/contact/">যোগাযোগ</a></li>
             </ul>
         </nav>
@@ -230,16 +230,19 @@
     document.addEventListener("DOMContentLoaded", function() {
         const menuBtn = document.getElementById("mobile-menu-btn");
         const navMenu = document.querySelector(".nav-menu");
+        
         if(menuBtn) {
             menuBtn.addEventListener("click", function() {
                 navMenu.classList.toggle("active");
-                const icon = menuBtn.querySelector('.dashicons');
+                
+                // Icon Change (Hamburger to Cross)
+                const icon = menuBtn.querySelector('i');
                 if(navMenu.classList.contains('active')) {
-                    icon.classList.remove('dashicons-menu-alt3');
-                    icon.classList.add('dashicons-no-alt');
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
                 } else {
-                    icon.classList.remove('dashicons-no-alt');
-                    icon.classList.add('dashicons-menu-alt3');
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
                 }
             });
         }
