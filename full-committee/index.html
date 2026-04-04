@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>কার্যনির্বাহী কমিটি – BTCLF NU</title>
-    <link rel="icon" href="/wp-content/uploads/2026/03/cropped-541970920_122170792904547151_8088674487403403961_n-1-32x32.jpg" sizes="32x32">
+    <link rel="icon" href="https://networknewsbd.com/nu/icon.jpg" sizes="32x32">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dashicons/6.2.2/css/dashicons.min.css">
@@ -17,7 +17,7 @@
             --text-color: #333333;
         }
 
-        /* Custom Font Face */
+        /* 1. Custom Font Face */
         @font-face {
             font-family: 'July';
             src: url('/wp-content/themes/btclf/assets/fonts/July-Regular.ttf') format('truetype');
@@ -26,12 +26,12 @@
             font-display: swap;
         }
 
-        /* Apply Font Globally */
+        /* 2. Apply Font Globally */
         body, h1, h2, h3, h4, h5, h6, p, a, div, li, ul, input, button, textarea, select {
             font-family: 'July', sans-serif !important;
         }
 
-        /* Icon Fixes */
+        /* 3. Icon Fixes */
         i.fa-solid, i.fa-brands, i.fa-regular, i.fas, i.fab, .dashicons { font-style: normal !important; }
         .dashicons, .dashicons-before::before { font-family: 'dashicons' !important; }
 
@@ -54,16 +54,8 @@
 
         .menu-toggle { display: none; background: transparent; border: none; color: var(--primary-color); font-size: 30px; cursor: pointer; padding: 5px; }
 
-        /* Responsive Nav */
-        @media screen and (max-width: 992px) {
-            .menu-toggle { display: block; }
-            .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 10px 15px rgba(0,0,0,0.1); padding: 15px 0; gap: 0; border-top: 1px solid #eee; }
-            .nav-menu.active { display: flex; }
-            .nav-menu li { width: 100%; text-align: center; }
-        }
-
         /* =========================================
-           Page Content CSS
+           Committee Page Styles
         ========================================= */
         .page-header-box { background: var(--primary-color); color: #fff; padding: 50px 20px; text-align: center; margin-bottom: 50px; border-bottom: 5px solid var(--accent-color); }
         .page-header-box h1 { margin: 0; font-size: 2.2rem; font-weight: bold; }
@@ -73,43 +65,41 @@
         .member-card:hover { border-bottom: 4px solid var(--primary-color); transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
         
         .member-img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid var(--accent-color); padding: 3px; display: inline-block; }
-        .member-name { font-size: 1.25rem; font-weight: bold; margin: 0 0 8px 0; color: #1e293b; }
+        .member-name { font-size: 1.25rem; font-weight: bold; margin: 0 0 8px 0; color: var(--primary-color); }
         .member-desig { font-size: 0.95rem; color: #fff; background: var(--primary-color); padding: 4px 15px; border-radius: 20px; display: inline-block; font-weight: bold; }
-        
-        /* =========================================
-           Footer CSS
-        ========================================= */
+
+        /* Footer CSS */
         .site-footer { background: #0f172a; color: #94a3b8; margin-top: 50px; border-top: 4px solid var(--accent-color); }
         .footer-main { padding: 40px 0 30px 0; }
         .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 15px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; }
         .footer-title { color: #f8fafc; font-size: 1.25rem; margin: 0 0 20px 0; font-weight: bold; position: relative; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .footer-title::after { content: ''; position: absolute; left: 0; bottom: -1px; width: 40px; height: 2px; background: var(--accent-color); }
         .footer-brand img { max-height: 60px; width: auto; background: #fff; padding: 5px 10px; border-radius: 6px; margin-bottom: 15px; }
-        .footer-desc { font-size: 0.95rem; line-height: 1.6; margin-bottom: 15px; }
-        
         .footer-links ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
         .footer-links li a { color: #94a3b8; text-decoration: none; font-size: 0.95rem; transition: 0.3s; display: flex; align-items: center; gap: 8px; }
         .footer-links li a::before { content: '»'; color: var(--accent-color); font-size: 18px; font-weight: bold; }
         .footer-links li a:hover { color: #fff; transform: translateX(5px); }
-        
         .footer-contact-list { list-style: none; padding: 0; margin: 0; }
         .footer-contact-list li { display: flex; align-items: center; gap: 12px; margin-bottom: 15px; font-size: 0.95rem; }
         .fc-icon { width: 36px; height: 36px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; border-radius: 50%; color: var(--accent-color); transition: 0.3s; }
         .footer-contact-list a { color: #94a3b8; text-decoration: none; transition: 0.3s; }
         .footer-contact-list a:hover { color: #fff; }
-        
         .footer-bottom { background: #020617; padding: 15px 0; font-size: 0.9rem; border-top: 1px solid rgba(255,255,255,0.05); }
         .footer-bottom-inner { max-width: 1200px; margin: 0 auto; padding: 0 15px; display: flex; justify-content: space-between; align-items: center; }
-        .footer-bottom a { color: #fff; text-decoration: none; font-weight: bold; }
+        .footer-bottom a { color: #fff; text-decoration: none; }
 
-        @media (max-width: 992px) { .footer-container { grid-template-columns: 1fr 1fr; gap: 30px; } }
+        @media (max-width: 992px) {
+            .menu-toggle { display: block; }
+            .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 10px 15px rgba(0,0,0,0.1); padding: 15px 0; }
+            .nav-menu.active { display: flex; }
+            .footer-container { grid-template-columns: 1fr 1fr; }
+        }
         @media (max-width: 768px) {
-            .footer-container { grid-template-columns: 1fr; text-align: center; gap: 15px; }
-            .footer-desc, .footer-links, .footer-title { display: none; }
-            .footer-brand img { margin: 0 auto; display: block; }
+            .footer-container { grid-template-columns: 1fr; text-align: center; }
+            .footer-links, .footer-title { display: none; }
             .footer-contact-list { display: flex; justify-content: center; gap: 20px; }
             .footer-contact-list li .fc-text { display: none; }
-            .footer-bottom-inner { flex-direction: column; text-align: center; gap: 5px;}
+            .footer-bottom-inner { flex-direction: column; gap: 10px; }
         }
     </style>
 </head>
@@ -119,11 +109,11 @@
 <header class="site-header">
     <div class="header-container">
         <div class="site-branding">
-            <a href="/"><img src="/wp-content/uploads/2026/03/cropped-541970920_122170792904547151_8088674487403403961_n.jpg" alt="BTCLF NU"></a>
+            <a href="/"><img src="https://networknewsbd.com/nu/logo_h.jpg" alt="BTCLF NU"></a>
         </div>
         <nav class="main-navigation">
             <button class="menu-toggle" id="mobile-menu-btn">
-                <span class="dashicons dashicons-menu-alt3" style="font-size: 30px;"></span>
+                <span class="dashicons dashicons-menu-alt3" style="font-size: 30px; width: 30px; height: 30px;"></span>
             </button>
             <ul class="nav-menu">
                 <li><a href="/">হোম</a></li>
@@ -142,113 +132,113 @@
 </div>
 
 <div class="committee-grid">
+    
     <a href="https://bycwf.org/author/jerin-jj98989874/" target="_blank" class="member-card">
-        <img src="/wp-content/uploads/2026/03/nu_president.jpg" class="member-img" alt="হুমাইরা খানম জেরীন">
+        <img src="https://networknewsbd.com/nu/nu_president.jpg" class="member-img" alt="হুমাইরা খানম জেরীন">
         <h4 class="member-name">হুমাইরা খানম জেরীন</h4>
         <div class="member-desig">সভাপতি</div>
     </a>
-    
+
     <a href="https://bycwf.org/author/taponghosh960/" target="_blank" class="member-card">
         <img src="/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-26-at-11.19.45-PM.jpeg" class="member-img" alt="তপন কুমার ঘোষ">
         <h4 class="member-name">তপন কুমার ঘোষ</h4>
         <div class="member-desig">সহ-সভাপতি</div>
     </a>
-    
+
     <a href="https://bycwf.org/author/tarekalmuntasir/" target="_blank" class="member-card">
         <img src="/wp-content/uploads/2026/03/IMG_20260301_230206_019-133.webp" class="member-img" alt="তারেক আল মুনতাছির">
         <h4 class="member-name">তারেক আল মুনতাছির</h4>
         <div class="member-desig">সাধারণ সম্পাদক</div>
     </a>
-    
+
     <a href="https://bycwf.org/author/hasnineoffical2002/" target="_blank" class="member-card">
-        <img src="/wp-content/uploads/2026/03/rijen.jpg" class="member-img" alt="মোঃ হাসনাইন রিজেন">
+        <img src="https://networknewsbd.com/nu/org.jpg" class="member-img" alt="মোঃ হাসনাইন রিজেন">
         <h4 class="member-name">মোঃ হাসনাইন রিজেন</h4>
         <div class="member-desig">সাংগঠনিক সম্পাদক</div>
     </a>
-    
+
     <a href="https://bycwf.org/author/ummetoha3325/" target="_blank" class="member-card">
-        <img src="/wp-content/uploads/2026/03/umme-salma.jpg" class="member-img" alt="উম্মে সালমা">
+        <img src="https://networknewsbd.com/nu/org_2.jpg" class="member-img" alt="উম্মে সালমা">
         <h4 class="member-name">উম্মে সালমা</h4>
         <div class="member-desig">সহ-সাংগঠনিক সম্পাদক</div>
     </a>
-    
+
     <a href="https://bycwf.org/author/malihaakter12425/" target="_blank" class="member-card">
         <img src="/wp-content/uploads/2026/03/maliha.jpg" class="member-img" alt="কাজী মালিহা আকতার">
         <h4 class="member-name">কাজী মালিহা আকতার</h4>
         <div class="member-desig">অর্থ সম্পাদক</div>
     </a>
-    
+
     <a href="https://bycwf.org/author/nusratjahanjarin74657/" target="_blank" class="member-card">
         <img src="/wp-content/uploads/2026/03/nusrat-jerin.jpg" class="member-img" alt="নুসরাত জাহান জেরিন">
         <h4 class="member-name">নুসরাত জাহান জেরিন</h4>
         <div class="member-desig">দপ্তর সম্পাদক</div>
     </a>
-    
+
     <a href="https://bycwf.org/author/ekramakashauthor46/" target="_blank" class="member-card">
         <img src="/wp-content/uploads/2026/03/ekram.jpg" class="member-img" alt="ইকরামুল হক শাহ">
         <h4 class="member-name">ইকরামুল হক শাহ</h4>
         <div class="member-desig">উপ-দপ্তর সম্পাদক</div>
     </a>
-    
+
     <a href="https://bycwf.org/author/nayemak47511/" target="_blank" class="member-card">
         <img src="/wp-content/uploads/2026/03/nayma.jpg" class="member-img" alt="নাইমা খাতুন">
         <h4 class="member-name">নাইমা খাতুন</h4>
         <div class="member-desig">প্রশিক্ষণ বিষয়ক সম্পাদক</div>
     </a>
-    
+
     <a href="https://bycwf.org/author/gcdebnath92742/" target="_blank" class="member-card">
         <img src="/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-26-at-6.24.05-PM.jpeg" class="member-img" alt="জি সি দেবনাথ">
         <h4 class="member-name">জি সি দেবনাথ</h4>
         <div class="member-desig">সাহিত্য ও প্রকাশনা বিষয়ক সম্পাদক</div>
     </a>
-    
+
     <a href="https://bycwf.org/author/tanginachaity57/" target="_blank" class="member-card">
         <img src="/wp-content/uploads/2026/03/tanjin.jpg" class="member-img" alt="তানজিনা আক্তার চৈতি">
         <h4 class="member-name">তানজিনা আক্তার চৈতি</h4>
         <div class="member-desig">প্রচার সম্পাদক</div>
     </a>
-    
+
     <a href="https://bycwf.org/author/mohammadnurhossainnayon/" target="_blank" class="member-card">
         <img src="/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-24-at-9.05.13-PM.jpeg" class="member-img" alt="মোহাম্মদ নুর হোসেন নয়ন">
         <h4 class="member-name">মোহাম্মদ নুর হোসেন নয়ন</h4>
         <div class="member-desig">তথ্য ও প্রযুক্তি বিষয়ক সম্পাদক</div>
     </a>
-    
+
     <a href="https://bycwf.org/author/raihanuddin/" target="_blank" class="member-card">
         <img src="/wp-content/uploads/2026/03/raihan_e.jpg" class="member-img" alt="রাইহান উদ্দিন">
         <h4 class="member-name">রাইহান উদ্দিন</h4>
         <div class="member-desig">সম্পাদকীয় পর্ষদ সদস্য ১</div>
     </a>
-    
+
     <a href="https://bycwf.org/author/sabbir5410965394/" target="_blank" class="member-card">
         <img src="/wp-content/uploads/2026/03/sabbir.jpg" class="member-img" alt="সাব্বির হাসান নিরব">
         <h4 class="member-name">সাব্বির হাসান নিরব</h4>
         <div class="member-desig">সম্পাদকীয় পর্ষদ সদস্য ২</div>
     </a>
-    
+
     <a href="https://bycwf.org/author/www-tasniataj14/" target="_blank" class="member-card">
         <img src="/wp-content/uploads/2026/03/tasnia.jpg" class="member-img" alt="তাসনিয়া তাবাচ্ছুম">
         <h4 class="member-name">তাসনিয়া তাবাচ্ছুম</h4>
         <div class="member-desig">কার্যনির্বাহী সদস্য ১</div>
     </a>
+
 </div>
 
 <footer class="site-footer">
     <div class="footer-main">
         <div class="footer-container">
             <div class="footer-brand">
-                <a href="/"><img src="/wp-content/uploads/2026/03/cropped-541970920_122170792904547151_8088674487403403961_n.jpg" alt="BTCLF NU"></a>
+                <a href="/"><img src="https://networknewsbd.com/nu/logo_h.jpg" alt="BTCLF NU"></a>
                 <p class="footer-desc">সুপ্ত প্রতিভা বিকশিত হোক লেখনীর ধারায়</p>
             </div>
             <div class="footer-links">
                 <h4 class="footer-title">প্রয়োজনীয় লিংক</h4>
                 <ul>
-                    <li><a href="/president-message">সভাপতির বাণী</a></li>
-                    <li><a href="/secretary-message">সম্পাদকের বাণী</a></li>
-                    <li><a href="/full-committee">কার্যনির্বাহী পর্ষদ</a></li>
-                    <li><a href="#">আর্কাইভ</a></li>
-                    <li><a href="/about">আমাদের সম্পর্কে</a></li>
-                    <li><a href="/contact">যোগাযোগ</a></li>
+                    <li><a href="#">সভাপতির বাণী</a></li>
+                    <li><a href="#">সম্পাদকের বাণী</a></li>
+                    <li><a href="#">কার্যনির্বাহী পর্ষদ</a></li>
+                    <li><a href="#">যোগাযোগ</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
@@ -257,19 +247,13 @@
                     <li>
                         <a href="https://web.facebook.com/btclf.nu" target="_blank" style="display:flex; align-items:center; gap:12px;">
                             <div class="fc-icon"><i class="fa-brands fa-facebook-f"></i></div>
-                            <div class="fc-text">
-                                <span style="display:block; font-size:0.8rem; color:#64748b;">অফিসিয়াল পেজ</span>
-                                ফেসবুকে যুক্ত হোন
-                            </div>
+                            <div class="fc-text"><span style="display:block; font-size:0.8rem; color:#64748b;">অফিসিয়াল পেজ</span>ফেসবুকে যুক্ত হোন</div>
                         </a>
                     </li>
                     <li>
                         <a href="tel:01886252507" style="display:flex; align-items:center; gap:12px;">
                             <div class="fc-icon"><i class="fa-solid fa-phone"></i></div>
-                            <div class="fc-text">
-                                <span style="display:block; font-size:0.8rem; color:#64748b;">যোগাযোগ করুন</span>
-                                01886252507
-                            </div>
+                            <div class="fc-text"><span style="display:block; font-size:0.8rem; color:#64748b;">যোগাযোগ করুন</span>01886252507</div>
                         </a>
                     </li>
                 </ul>
@@ -279,7 +263,7 @@
     <div class="footer-bottom">
         <div class="footer-bottom-inner">
             <p>© 2026 <a href="/">BTCLF NU</a>. সর্বস্বত্ব সংরক্ষিত।</p>
-            <p class="dev-credit">Developed by <a href="http://facebook.com/RJTanjid24">RJ Tanjid</a></p>
+            <p class="dev-credit" style="color:#64748b;">Developed by <a href="#" style="color:#64748b; font-weight:normal;">RJ Tanjid</a></p>
         </div>
     </div>
 </footer>
@@ -288,8 +272,7 @@
     document.addEventListener("DOMContentLoaded", function() {
         const menuBtn = document.getElementById("mobile-menu-btn");
         const navMenu = document.querySelector(".nav-menu");
-        
-        if (menuBtn) {
+        if(menuBtn) {
             menuBtn.addEventListener("click", function() {
                 navMenu.classList.toggle("active");
                 const icon = menuBtn.querySelector('.dashicons');
