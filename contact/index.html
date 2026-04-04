@@ -278,14 +278,11 @@
     </main>
 
     <aside class="sidebar-content">
-        
         <section class="widget founder-widget">
             <h3 class="widget-title">প্রতিষ্ঠাতা</h3>
             <div class="founder-box">
-                <img src="/wp-content/themes/btclf/assets/images/founder.jpg" alt="প্রতিষ্ঠাতা" class="founder-img" onerror="this.src='https://via.placeholder.com/150';">
-                <div class="founder-text">
-                    <p>জাহানুর ইসলাম</p>
-                </div>
+                <img src="https://networknewsbd.com/nu/founder.jpg" alt="প্রতিষ্ঠাতা" class="founder-img">
+                <div class="founder-text"><p>জাহানুর ইসলাম</p></div>
             </div>
         </section>
 
@@ -298,7 +295,15 @@
 
         <section class="widget widget_media_image">
             <h3 class="widget-title">মাসিক সেরা লেখক</h3>
-            <a href="#"><img src="/wp-content/uploads/2026/03/feb-bw-300x300.jpg" style="max-width: 100%; height: auto;" alt=""></a>
+            <a href="#"><img src="" style="max-width: 100%; height: auto;" alt=""></a>
+        </section>
+                <section class="widget widget_media_image">
+            <h3 class="widget-title">প্রকাশিত লেখার পরিসংখ্যান</h3>
+            <a href="#"><img src="https://networknewsbd.com/nu/statistic%20march.jpg" style="max-width: 100%; height: auto;" alt=""></a>
+        </section>
+                <section class="widget widget_media_image">
+            <h3 class="widget-title">সাম্প্রতিক কর্মশালা</h3>
+            <a href="#"><img src="https://networknewsbd.com/nu/btclf_campus%20feature%20banner.jpg" style="max-width: 100%; height: auto;" alt=""></a>
         </section>
 
         <section class="widget widget_calendar">
@@ -317,78 +322,23 @@
                 </tbody>
             </table>
         </section>
-
-        <section class="widget widget_block">
-            <div class="btclf-survey-wrap">
-                <div class="btclf-survey-header">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"></path><path d="M4 11h1v1H4v-1zm2-3h1v4H6V8zm2-2h1v6H8V6zm2-1h1v7h-1V5z"></path></svg>
-                    অনলাইন জরিপ
-                </div>
-                
-                <div class="btclf-survey-body">
-                    <h4 class="btclf-survey-question">এবারের ঈদ কোথায় করছেন?</h4>
-                    <div id="btclf_survey_options">
-                        <button class="survey-option-btn" onclick="submitCustomVote(this)">
-                            <div class="survey-progress-bar"></div>
-                            <span>গ্রামে</span>
-                            <span class="survey-percent-text"></span>
-                        </button>
-                        <button class="survey-option-btn" onclick="submitCustomVote(this)">
-                            <div class="survey-progress-bar"></div>
-                            <span>শহরে</span>
-                            <span class="survey-percent-text"></span>
-                        </button>
-                    </div>
-                    
-                    <div style="text-align:center;">
-                        <span class="survey-total-votes">
-                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"></path></svg> 
-                            মোট ভোটদাতা: <span id="btclf_total_votes">০</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-
-            <script>
-            function submitCustomVote(clickedBtn) {
-                let container = clickedBtn.parentElement;
-                let buttons = container.querySelectorAll('.survey-option-btn');
-                
-                buttons.forEach(btn => {
-                    btn.classList.add('voted');
-                    if(btn !== clickedBtn) {
-                        btn.querySelector('.survey-progress-bar').style.width = '0%'; 
-                        btn.querySelector('.survey-percent-text').innerText = '০%';
-                    }
-                });
-
-                clickedBtn.querySelector('.survey-progress-bar').style.width = '100%';
-                clickedBtn.querySelector('.survey-percent-text').innerText = '১০০%';
-                
-                document.getElementById('btclf_total_votes').innerText = '১';
-            }
-            </script>
-        </section>
-
     </aside>
 </div>
+
 
 <footer class="site-footer">
     <div class="footer-main">
         <div class="footer-container">
             <div class="footer-brand">
-                <a href="/">
-                    <img src="https://networknewsbd.com/nu/logo_h.jpg" alt="BTCLF NU" style="max-height: 60px; width: auto; object-fit: contain; background: #fff; padding: 5px 10px; border-radius: 6px;">
-                </a>
+                <a href="/"><img src="https://networknewsbd.com/nu/logo_h.jpg" alt="BTCLF NU"></a>
                 <p class="footer-desc">সুপ্ত প্রতিভা বিকশিত হোক লেখনীর ধারায়</p>
             </div>
             <div class="footer-links">
                 <h4 class="footer-title">প্রয়োজনীয় লিংক</h4>
                 <ul>
-                    <li><a href="#">সভাপতির বাণী</a></li>
-                    <li><a href="#">সম্পাদকের বাণী</a></li>
+                    <li><a href="/president-message">সভাপতির বাণী</a></li>
+                    <li><a href="/secretary-message">সম্পাদকের বাণী</a></li>
                     <li><a href="/full-committee/">কার্যনির্বাহী পর্ষদ</a></li>
-                    <li><a href="#">আর্কাইভ</a></li>
                     <li><a href="/about/">আমাদের সম্পর্কে</a></li>
                     <li><a href="/contact/">যোগাযোগ</a></li>
                 </ul>
@@ -415,10 +365,11 @@
     <div class="footer-bottom">
         <div class="footer-bottom-inner">
             <p>© 2026 <a href="/">BTCLF NU</a>. সর্বস্বত্ব সংরক্ষিত।</p>
-            <p class="dev-credit" style="color:#64748b;">Developed by <a href="#" style="color:#64748b; font-weight:normal;">RJ Tanjid</a></p>
+            <p class="dev-credit" style="color:#64748b;">Developed by <a href="https://rjtanjid24.github.io/me" style="color:#64748b; font-weight:normal;">RJ Tanjid</a></p>
         </div>
     </div>
 </footer>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
