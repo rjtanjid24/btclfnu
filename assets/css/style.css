@@ -1,0 +1,22 @@
+/*
+Theme Name: BTCLF Theme
+Theme URI: https://yourwebsite.com/
+Author: Tanjid
+Author URI: https://yourwebsite.com/
+Description: 'বাংলাদেশ তরুণ কলাম লেখক ফোরাম'-এর অফিশিয়াল ওয়ার্ডপ্রেস থিম। মূলমন্ত্র: তারুণ্যের শানিত কলমে আলোকিত হোক ধরণী।
+Version: 1.0.0
+Requires at least: 5.8
+Tested up to: 6.4
+Requires PHP: 7.4
+Text Domain: btclf
+Tags: custom-background, custom-logo, custom-menu, featured-images, translation-ready
+*/
+
+/* Reset & Basic Styles */
+body {
+    font-family: 'Kalpurush', 'SolaimanLipi', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
