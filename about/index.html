@@ -55,13 +55,11 @@
         .menu-toggle { display: none; background: transparent; border: none; color: var(--primary-color); font-size: 30px; cursor: pointer; padding: 5px; }
 
         /* =========================================
-           Page Layout CSS
+           Page Layout CSS (Full Width)
         ========================================= */
-        .home-container { display: flex; flex-wrap: wrap; max-width: 1200px; margin: 30px auto; padding: 0 15px; gap: 30px; box-sizing: border-box; }
-        .main-content { flex: 1 1 70%; max-width: 70%; min-width: 0; box-sizing: border-box; }
-        .sidebar-content { flex: 1 1 25%; max-width: 25%; box-sizing: border-box; }
-
-        .page-wrapper { background: #fff; border: 1px solid #eaeaea; border-radius: 8px; padding: 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); margin-bottom: 40px; }
+        .home-container { display: flex; flex-wrap: wrap; max-width: 1000px; margin: 30px auto; padding: 0 15px; box-sizing: border-box; }
+        .main-content { flex: 1 1 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }
+        .page-wrapper { background: transparent; border: none; border-radius: 0; padding: 0; box-shadow: none; margin-bottom: 40px; }
         
         /* About Us Premium Block */
         .about-hero-banner { background: linear-gradient(135deg, #082d6b 0%, #041533 100%); border-radius: 12px; padding: 40px 30px; text-align: center; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(8, 45, 107, 0.15); position: relative; overflow: hidden; }
@@ -70,8 +68,8 @@
         .about-hero-banner h1 { font-size: 2.2rem; color: #ffffff !important; margin: 0 0 5px 0; font-weight: bold; }
         .about-hero-banner h3 { font-size: 1.3rem; color: #94a3b8; margin: 0; font-weight: normal; }
 
-        .about-text-content { margin-bottom: 40px; }
-        .about-text-content p { font-size: 1.1rem; line-height: 1.8; color: #475569; text-align: justify; margin-bottom: 20px; }
+        .about-text-content { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); border: 1px solid #eaeaea; margin-bottom: 40px; }
+        .about-text-content p { font-size: 1.15rem; line-height: 1.8; color: #475569; text-align: justify; margin-bottom: 20px; }
         
         .eligibility-alert { background: #fefce8; border: 1px solid #fef08a; border-left: 4px solid #fbd914; padding: 20px 25px; border-radius: 8px; display: flex; align-items: center; gap: 15px; margin-top: 30px; }
         .eligibility-alert i { font-size: 24px; color: #ca8a04; }
@@ -93,38 +91,6 @@
         .contact-btn:hover .c-icon { background: #0b3d91; color: #fff; }
         .c-text h4 { margin: 0 0 3px 0; font-size: 0.9rem; color: #64748b; font-weight: normal; }
         .c-text span { font-size: 1.05rem; color: #0f172a; font-weight: bold; }
-
-        /* =========================================
-           Sidebar CSS
-        ========================================= */
-        .sidebar-right { width: 100%; }
-        .widget { background: #fff; border: 1px solid #eaeaea; border-radius: 12px; padding: 25px 20px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
-        .widget-title { font-size: 1.3rem; color: var(--primary-color); border-bottom: 2px solid #f1f5f9; padding-bottom: 12px; margin: 0 0 20px 0; border-left: 4px solid var(--accent-color); padding-left: 12px; font-weight: bold; }
-        
-        .founder-box { text-align: center; }
-        .founder-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent-color); margin-bottom: 15px; padding: 3px; }
-        .founder-text { font-size: 1.05rem; line-height: 1.6; color: #475569; }
-        .fb-page-box { border-radius: 8px; overflow: hidden; border: 1px solid #eaeaea; }
-
-        /* Calendar Widget */
-        .widget_calendar #wp-calendar { width: 100%; border-collapse: collapse; background: #fff; margin-top: 10px; }
-        .widget_calendar #wp-calendar caption { text-align: center; font-size: 1.1rem; color: #444; margin-bottom: 10px; }
-        .widget_calendar #wp-calendar thead th { background-color: #e5e5e5; color: #444; text-align: center; padding: 10px 0; border: 1px solid #d4d4d4; }
-        .widget_calendar #wp-calendar tbody td { text-align: center; padding: 10px 0; border: 1px solid #d4d4d4; color: #555; }
-        .widget_calendar #wp-calendar tbody td#today { color: #0000ee; text-decoration: underline; font-weight: bold; }
-
-        /* Survey Widget */
-        .btclf-survey-wrap { border-radius: 12px; overflow: hidden; }
-        .btclf-survey-header { background: var(--primary-color); color: #fff; padding: 15px 20px; font-size: 1.25rem; font-weight: bold; display: flex; align-items: center; gap: 10px; border-bottom: 3px solid var(--accent-color); }
-        .btclf-survey-body { padding: 30px 20px; }
-        .btclf-survey-question { font-size: 1.2rem; color: #1e293b; font-weight: bold; margin: 0 0 25px 0; line-height: 1.5; text-align: center; }
-        .survey-option-btn { display: block; width: 100%; text-align: left; background: #f8fafc; border: 2px solid #e2e8f0; padding: 12px 15px; border-radius: 8px; margin-bottom: 15px; font-weight: bold; font-size: 1.1rem; color: #334155; cursor: pointer; position: relative; overflow: hidden; z-index: 1; transition: 0.3s; font-family: inherit; outline: none; }
-        .survey-option-btn:hover { border-color: var(--primary-color); }
-        .survey-progress-bar { position: absolute; left: 0; top: 0; height: 100%; background: rgba(251, 217, 20, 0.5); width: 0%; z-index: -1; transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
-        .survey-percent-text { float: right; font-weight: bold; opacity: 0; color: var(--primary-color); transition: opacity 0.5s ease 0.3s; }
-        .survey-option-btn.voted { background: #fff; border-color: var(--primary-color); pointer-events: none; }
-        .survey-option-btn.voted .survey-percent-text { opacity: 1; }
-        .survey-total-votes { display: inline-flex; align-items: center; gap: 8px; background: rgba(11, 61, 145, 0.1); color: var(--primary-color); padding: 8px 18px; border-radius: 30px; font-weight: bold; font-size: 0.95rem; margin-top: 15px; }
 
         /* =========================================
            Footer CSS
@@ -150,15 +116,15 @@
 
         @media (max-width: 992px) {
             .menu-toggle { display: block; }
-            .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 10px 15px rgba(0,0,0,0.1); padding: 15px 0; }
+            .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #fff; box-shadow: 0 10px 15px rgba(0,0,0,0.1); padding: 15px 0; border-top: 1px solid #eee; }
             .nav-menu.active { display: flex; }
-            .main-content, .sidebar-content { flex: 1 1 100%; max-width: 100%; }
-            .page-wrapper { padding: 25px; }
+            .nav-menu li { width: 100%; text-align: left; }
             .footer-container { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 768px) {
             .about-hero-banner { padding: 30px 15px; }
             .about-hero-banner h1 { font-size: 1.8rem; }
+            .about-text-content { padding: 25px; }
             .eligibility-alert { flex-direction: column; text-align: center; gap: 10px; }
             .footer-container { grid-template-columns: 1fr; text-align: center; }
             .footer-links, .footer-title { display: none; }
@@ -286,61 +252,15 @@
             </div>
         </article>
     </main>
-
-   <aside class="sidebar-content">
-        <section class="widget founder-widget">
-            <h3 class="widget-title">প্রতিষ্ঠাতা</h3>
-            <div class="founder-box">
-                <img src="https://networknewsbd.com/nu/founder.jpg" alt="প্রতিষ্ঠাতা" class="founder-img">
-                <div class="founder-text"><p>জাহানুর ইসলাম</p></div>
-            </div>
-        </section>
-
-        <section class="widget fb-widget">
-            <h3 class="widget-title"><span class="dashicons dashicons-facebook-alt" style="margin-top: 2px;"></span> ফেসবুকে আমরা</h3>
-            <div class="fb-page-box">
-                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fbtclf.nu&tabs=timeline&width=340&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-            </div>
-        </section>
-
-        <section class="widget widget_media_image">
-            <h3 class="widget-title">মাসিক সেরা লেখক</h3>
-            <a href="#"><img src="" style="max-width: 100%; height: auto;" alt=""></a>
-        </section>
-                <section class="widget widget_media_image">
-            <h3 class="widget-title">প্রকাশিত লেখার পরিসংখ্যান</h3>
-            <a href="#"><img src="https://networknewsbd.com/nu/statistic%20march.jpg" style="max-width: 100%; height: auto;" alt=""></a>
-        </section>
-                <section class="widget widget_media_image">
-            <h3 class="widget-title">সাম্প্রতিক কর্মশালা</h3>
-            <a href="#"><img src="https://networknewsbd.com/nu/btclf_campus%20feature%20banner.jpg" style="max-width: 100%; height: auto;" alt=""></a>
-        </section>
-
-        <section class="widget widget_calendar">
-            <h3 class="widget-title">ক্যালেন্ডার</h3>
-            <table id="wp-calendar">
-                <caption>April 2026</caption>
-                <thead>
-                    <tr><th>S</th><th>S</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td colspan="4" class="pad"> </td><td>1</td><td>2</td><td>3</td></tr>
-                    <tr><td id="today">4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
-                    <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
-                    <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
-                    <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td class="pad"> </td></tr>
-                </tbody>
-            </table>
-        </section>
-    </aside>
 </div>
-
 
 <footer class="site-footer">
     <div class="footer-main">
         <div class="footer-container">
             <div class="footer-brand">
-                <a href="/"><img src="https://networknewsbd.com/nu/logo_h.jpg" alt="BTCLF NU"></a>
+                <a href="/">
+                    <img src="https://networknewsbd.com/nu/logo_h.jpg" alt="BTCLF NU" style="max-height: 60px; width: auto; object-fit: contain; background: #fff; padding: 5px 10px; border-radius: 6px;">
+                </a>
                 <p class="footer-desc">সুপ্ত প্রতিভা বিকশিত হোক লেখনীর ধারায়</p>
             </div>
             <div class="footer-links">
