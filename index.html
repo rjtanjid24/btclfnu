@@ -407,6 +407,32 @@
             <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
         </div>
 
+<style>
+    /* ল্যাপটপ/ডেস্কটপে অ্যারো বাটন হাইড করার জন্য */
+    @media (min-width: 1025px) {
+        .advisorSwiper .swiper-button-next, 
+        .advisorSwiper .swiper-button-prev {
+            display: none !important;
+        }
+    }
+
+    /* কার্ডগুলোর উচ্চতা সমান করার ফিক্স */
+    .advisorSwiper .swiper-slide {
+        height: auto !important;
+    }
+    .advisor-card {
+        height: 100% !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        box-sizing: border-box;
+    }
+    .advisor-card p {
+        margin-top: auto !important; /* পদবি সব সময় কার্ডের নিচে সমান লাইনে থাকবে */
+    }
+</style>
+
 <div class="advisor-section-wrap">
     <h2 class="section-title" style="margin-top: 0;">আমাদের উপদেষ্টামণ্ডলী</h2>
     <div class="swiper advisorSwiper committee-swiper">
@@ -444,132 +470,167 @@
                 </div>
             </div>
         </div>
-        <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
 </div>
 
-        <h2 class="section-title">টিম লিডার 
-            <select id="branchSelector" class="branch-select" onchange="showBranchGroup(this.value)">
-                <option value="team-ichamati">ইছামতী</option>
-                <option value="team-karnafuli">কর্ণফুলী</option>
-                <option value="team-surma">সুরমা</option>
-                <option value="team-halda">হালদা</option>
-                <option value="team-padma">পদ্মা</option>
-                <option value="team-brahmaputra">ব্রহ্মপুত্র</option>
-                <option value="team-kirtankhola">কীর্তনখোলা</option>
-                <option value="team-karatoya">করতোয়া</option>
-            </select>
-        </h2>
-        
-        <div id="team-ichamati" class="swiper branchSwiper committee-swiper branch-group" style="display: block;">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#" class="member-card">
-                        <img src="https://networknewsbd.com/nu/org.jpg" class="member-img">
-                        <h4 class="member-name">মোঃ হাসনাইন রিজেন</h4>
-                        <div class="member-desig">টিম লিডার</div>
-                    </a>
-                </div>
+        <style>
+    /* ল্যাপটপ/ডেস্কটপে টিম লিডারদের অ্যারো বাটন হাইড করার জন্য */
+    @media (min-width: 1025px) {
+        .branchSwiper .swiper-button-next, 
+        .branchSwiper .swiper-button-prev {
+            display: none !important;
+        }
+    }
+
+    /* মোবাইলে অ্যারো আইকন সাইজ একটু ছোট এবং সুন্দর করার জন্য */
+    @media (max-width: 768px) {
+        .branchSwiper .swiper-button-next, 
+        .branchSwiper .swiper-button-prev {
+            width: 30px !important;
+            height: 30px !important;
+        }
+        .branchSwiper .swiper-button-next::before, 
+        .branchSwiper .swiper-button-prev::before {
+            width: 12px !important;
+            height: 12px !important;
+        }
+    }
+</style>
+
+<h2 class="section-title">টিম লিডার 
+    <select id="branchSelector" class="branch-select" onchange="showBranchGroup(this.value)">
+        <option value="team-ichamati">ইছামতী</option>
+        <option value="team-karnafuli">কর্ণফুলী</option>
+        <option value="team-surma">সুরমা</option>
+        <option value="team-halda">হালদা</option>
+        <option value="team-brahmaputra">ব্রহ্মপুত্র</option>
+        <option value="team-kirtankhola">কীর্তনখোলা</option>
+        <option value="team-padma">পদ্মা</option>
+        <option value="team-karatoya">করতোয়া</option>
+    </select>
+</h2>
+
+<div id="team-ichamati" class="swiper branchSwiper committee-swiper branch-group" style="display: block;">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="member-card">
+                <img src="https://networknewsbd.com/nu/org.jpg" class="member-img">
+                <h4 class="member-name">মোঃ হাসনাইন রিজেন</h4>
+                <div class="member-desig">টিম লিডার</div>
             </div>
         </div>
-        <div id="team-karnafuli" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#" class="member-card">
-                        <img src="https://networknewsbd.com/nu/finance.jpg" class="member-img">
-                        <h4 class="member-name">কাজী মালিহা আকতার</h4>
-                        <div class="member-desig">টিম লিডার</div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="member-card">
-                        <img src="https://networknewsbd.com/nu/executive.jpg" class="member-img">
-                        <h4 class="member-name">তাসনিয়া তাবাচ্ছুম</h4>
-                        <div class="member-desig">উপ টিম লিডার</div>
-                    </a>
-                </div>
+    </div>
+</div>
+
+<div id="team-karnafuli" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="member-card">
+                <img src="https://networknewsbd.com/nu/finance.jpg" class="member-img">
+                <h4 class="member-name">কাজী মালিহা আকতার</h4>
+                <div class="member-desig">টিম লিডার</div>
             </div>
         </div>
-        <div id="team-surma" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#" class="member-card">
-                        <img src="https://networknewsbd.com/nu/training.jpg" class="member-img">
-                        <h4 class="member-name">নাইমা খাতুন</h4>
-                        <div class="member-desig">টিম লিডার</div>
-                    </a>
-                </div>
+        <div class="swiper-slide">
+            <div class="member-card">
+                <img src="https://networknewsbd.com/nu/executive.jpg" class="member-img">
+                <h4 class="member-name">তাসনিয়া তাবাচ্ছুম</h4>
+                <div class="member-desig">উপ টিম লিডার</div>
             </div>
         </div>
-        <div id="team-halda" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#" class="member-card">
-                        <img src="https://networknewsbd.com/nu/office.jpg" class="member-img">
-                        <h4 class="member-name">নুসরাত জাহান জেরিন</h4>
-                        <div class="member-desig">টিম লিডার</div>
-                    </a>
-                </div>
+    </div>
+    <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+</div>
+
+<div id="team-surma" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="member-card">
+                <img src="https://networknewsbd.com/nu/training.jpg" class="member-img">
+                <h4 class="member-name">নাইমা খাতুন</h4>
+                <div class="member-desig">টিম লিডার</div>
             </div>
         </div>
-        <div id="team-brahmaputra" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#" class="member-card">
-                        <img src="https://networknewsbd.com/nu/rikma.jpg" class="member-img">
-                        <h4 class="member-name">রিকমা আক্তার</h4>
-                        <div class="member-desig">টিম লিডার</div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="member-card">
-                        <img src="https://networknewsbd.com/nu/edt_2.jpg" class="member-img">
-                        <h4 class="member-name">সাব্বির হাসান</h4>
-                        <div class="member-desig">উপ টিম লিডার</div>
-                    </a>
-                </div>
+    </div>
+</div>
+
+<div id="team-halda" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="member-card">
+                <img src="https://networknewsbd.com/nu/office.jpg" class="member-img">
+                <h4 class="member-name">নুসরাত জাহান জেরিন</h4>
+                <div class="member-desig">টিম লিডার</div>
             </div>
         </div>
-        <div id="team-kirtankhola" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#" class="member-card">
-                        <img src="https://networknewsbd.com/nu/avatar_f.webp" class="member-img">
-                        <h4 class="member-name">সুরাইয়া ইয়াসমিন সুমি</h4>
-                        <div class="member-desig">টিম লিডার</div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#" class="member-card">
-                        <img src="https://networknewsbd.com/nu/avatar_f.webp" class="member-img">
-                        <h4 class="member-name">বিলকিস নাহার মিতু</h4>
-                        <div class="member-desig">উপ টিম লিডার</div>
-                    </a>
-                </div>
+    </div>
+</div>
+
+<div id="team-brahmaputra" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="member-card">
+                <img src="https://networknewsbd.com/nu/rikma.jpg" class="member-img">
+                <h4 class="member-name">রিকমা আক্তার</h4>
+                <div class="member-desig">টিম লিডার</div>
             </div>
         </div>
-        <div id="team-padma" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#" class="member-card">
-                        <img src="/wp-content/uploads/2026/03/IMG_20251031_140436-69b4751600116-1773434134-scaled-1.webp" class="member-img">
-                        <h4 class="member-name">শামীম আহম্মেদ</h4>
-                        <div class="member-desig">টিম লিডার</div>
-                    </a>
-                </div>
+        <div class="swiper-slide">
+            <div class="member-card">
+                <img src="https://networknewsbd.com/nu/edt_2.jpg" class="member-img">
+                <h4 class="member-name">সাব্বির হাসান</h4>
+                <div class="member-desig">উপ টিম লিডার</div>
             </div>
         </div>
-        <div id="team-karatoya" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#" class="member-card">
-                        <img src="https://networknewsbd.com/nu/ict.jpeg" class="member-img">
-                        <h4 class="member-name">মোহাম্মদ নুর হোসেন নয়ন</h4>
-                        <div class="member-desig">টিম লিডার</div>
-                    </a>
-                </div>
+    </div>
+    <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+</div>
+
+<div id="team-kirtankhola" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="member-card">
+                <img src="https://networknewsbd.com/nu/avatar_f.webp" class="member-img">
+                <h4 class="member-name">সুরাইয়া ইয়াসমিন সুমি</h4>
+                <div class="member-desig">টিম লিডার</div>
             </div>
         </div>
+        <div class="swiper-slide">
+            <div class="member-card">
+                <img src="https://networknewsbd.com/nu/avatar_f.webp" class="member-img">
+                <h4 class="member-name">বিলকিস নাহার মিতু</h4>
+                <div class="member-desig">উপ টিম লিডার</div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-button-next"></div><div class="swiper-button-prev"></div>
+</div>
+
+<div id="team-padma" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="member-card">
+                <img src="/wp-content/uploads/2026/03/IMG_20251031_140436-69b4751600116-1773434134-scaled-1.webp" class="member-img">
+                <h4 class="member-name">শামীম আহম্মেদ</h4>
+                <div class="member-desig">টিম লিডার</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="team-karatoya" class="swiper branchSwiper committee-swiper branch-group" style="display: none;">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="member-card">
+                <img src="https://networknewsbd.com/nu/ict.jpeg" class="member-img">
+                <h4 class="member-name">মোহাম্মদ নুর হোসেন নয়ন</h4>
+                <div class="member-desig">টিম লিডার</div>
+            </div>
+        </div>
+    </div>
+</div>
         <div class="service-grid">
             <div class="service-box">
                 <div class="service-icon-wrap"><img src="https://networknewsbd.com/nu/box_1.png"></div>
@@ -766,11 +827,11 @@
             },
         });
 
-        // 3. Swiper Configuration for Committees and Advisors
-        var committeeOptions = {
+        // 3. General Swiper Configuration (Advisors & Main Committee)
+        var generalOptions = {
             slidesPerView: 1, 
             spaceBetween: 20,
-            observer: true,       // স্লাইডার হাইড থাকলেও লোড হবে
+            observer: true,
             observeParents: true,
             navigation: { 
                 nextEl: ".swiper-button-next", 
@@ -779,38 +840,53 @@
             breakpoints: { 
                 576: { slidesPerView: 2 }, 
                 768: { slidesPerView: 3 },
-                1024: { slidesPerView: 4 } // ডেস্কটপে ৪ জন দেখাবে
+                1024: { slidesPerView: 4 } 
             }
         };
 
-        // Initialize general swipers
         if (document.querySelector(".committeeSwiper")) {
-            new Swiper(".committeeSwiper", committeeOptions);
+            new Swiper(".committeeSwiper", generalOptions);
         }
         if (document.querySelector(".advisorSwiper")) {
-            new Swiper(".advisorSwiper", committeeOptions);
+            new Swiper(".advisorSwiper", generalOptions);
         }
         
         // 4. Initialize Branch Swipers (Team Leaders)
+        // এখানে স্লাইডার বাটনগুলো আলাদাভাবে শনাক্ত করার লজিক দেওয়া হয়েছে
         var branchSwipers = document.querySelectorAll('.branchSwiper');
         branchSwipers.forEach(function(el) {
-            new Swiper(el, committeeOptions);
+            new Swiper(el, {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                observer: true,
+                observeParents: true,
+                navigation: {
+                    nextEl: el.querySelector('.swiper-button-next'),
+                    prevEl: el.querySelector('.swiper-button-prev'),
+                },
+                breakpoints: {
+                    1024: { slidesPerView: 2 } // ল্যাপটপে ২ জন
+                }
+            });
         });
 
-    }); // DOMContentLoaded ক্লোজ হলো এখানে
+    }); 
 
-    // 5. Team Leader Filter Functionality (এটা ইভেন্টের বাইরে থাকবে)
+    // 5. Team Leader Filter Functionality
     function showBranchGroup(teamId) {
         const groups = document.querySelectorAll('.branch-group');
         groups.forEach(function(group) {
             group.style.display = 'none';
         });
+        
         const selectedGroup = document.getElementById(teamId);
         if (selectedGroup) {
             selectedGroup.style.display = 'block';
-            // সিলেক্ট করার পর স্লাইডার আপডেট করার জন্য
+            
+            // স্লাইডার রিফ্রেশ লজিক
             if (selectedGroup.swiper) {
                 selectedGroup.swiper.update();
+                selectedGroup.swiper.navigation.update();
             }
         }
     }
