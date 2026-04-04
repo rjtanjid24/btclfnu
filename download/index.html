@@ -65,6 +65,7 @@
         
         .page-header-box { background: var(--primary-color); color: #fff; padding: 50px 20px; text-align: center; margin-bottom: 30px; border-radius: 12px; border-bottom: 5px solid var(--accent-color); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         .page-header-box h1 { margin: 0; font-size: 2.2rem; font-weight: bold; }
+        .page-header-box p { margin: 10px 0 0 0; font-size: 1.1rem; opacity: 0.9; }
 
         /* =========================================
            Certificate Download Custom CSS
@@ -79,6 +80,10 @@
         .btn-download { width: 100%; background: var(--primary-color); color: #fff; border: none; padding: 15px; border-radius: 8px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 10px; }
         .btn-download:hover { background: #082d6b; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(11, 61, 145, 0.2); }
         .btn-download:disabled { background: #94a3b8; cursor: not-allowed; transform: none; box-shadow: none; }
+
+        .report-issue { text-align: center; margin-top: 25px; }
+        .report-issue a { color: #94a3b8; font-size: 0.9rem; text-decoration: none; border-bottom: 1px dashed #94a3b8; transition: color 0.3s ease; }
+        .report-issue a:hover { color: #ef4444; border-color: #ef4444; }
 
         #message { margin-top: 20px; padding: 15px; border-radius: 8px; display: none; line-height: 1.6; font-weight: bold; font-size: 1.05rem; }
         .error { background: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
@@ -157,6 +162,7 @@
         
         <div class="page-header-box">
             <h1>সার্টিফিকেট ডাউনলোড</h1>
+            <p>বাংলাদেশ তরুণ কলাম লেখক ফোরাম, জাতীয় বিশ্ববিদ্যালয় আয়োজিত বিভিন্ন আয়োজনের ই-সার্টিফিকেট ডাউনলোড করুন।</p>
         </div>
 
         <div class="download-wrapper">
@@ -182,10 +188,14 @@
 
             <button id="downloadBtn" class="btn-download" onclick="handleDownload()">
                 <i class="fa-solid fa-circle-notch spinner" id="loader"></i>
-                <span id="btnText">সার্টিফিকেট যাচাই করুন</span>
+                <span id="btnText">সার্টিফিকেট খুঁজুন</span>
             </button>
 
             <div id="message"></div>
+
+            <div class="report-issue">
+                <a href="https://www.facebook.com/tanjid.frc/" target="_blank"><i class="fa-regular fa-flag"></i> অভিযোগ জানান</a>
+            </div>
         </div>
 
     </main>
@@ -279,7 +289,7 @@
         // UI Reset
         btn.disabled = true;
         loader.style.display = 'inline-block';
-        btnText.innerText = "যাচাই করা হচ্ছে...";
+        btnText.innerText = "খোঁজা হচ্ছে...";
         msg.style.display = 'none';
 
         // Your specific Apps Script URL
@@ -294,7 +304,7 @@
 
             if (result.status === "success") {
                 msg.className = "success";
-                msg.innerHTML = `<i class="fa-solid fa-circle-check"></i> অভিনন্দন ${name}!<br>আপনার সার্টিফিকেটটি পাওয়া গেছে। ডাউনলোড শুরু হচ্ছে...`;
+                msg.innerHTML = `<i class="fa-solid fa-circle-check"></i> অভিনন্দন ${name}!<br>আপনার সার্টিফিকেটটি পাওয়া গেছে। ডাউনলোড শুরু হচ্ছে...`;
                 msg.style.display = "block";
 
                 // Trigger Download
@@ -307,17 +317,17 @@
                 
             } else {
                 msg.className = "error";
-                msg.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> দুঃখিত!<br>এই ইভেন্টে আপনার দেওয়া মোবাইল নম্বরের বিপরীতে কোনো সার্টিফিকেট পাওয়া যায়নি।`;
+                msg.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> দুঃখিত!<br>এই ইভেন্টে আপনার দেওয়া মোবাইল নম্বরের বিপরীতে কোনো সার্টিফিকেট পাওয়া যায়নি।`;
                 msg.style.display = "block";
             }
         } catch (error) {
             msg.className = "error";
-            msg.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> সার্ভার ত্রুটি!<br>দয়া করে কিছুক্ষণ পর আবার চেষ্টা করুন।`;
+            msg.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i> সার্ভার ত্রুটি!<br>দয়া করে কিছুক্ষণ পর আবার চেষ্টা করুন।`;
             msg.style.display = "block";
         } finally {
             btn.disabled = false;
             loader.style.display = 'none';
-            btnText.innerText = "সার্টিফিকেট যাচাই করুন";
+            btnText.innerText = "সার্টিফিকেট খুঁজুন";
         }
     }
 </script>
