@@ -730,62 +730,89 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         
-        // Mobile Menu Toggle
-const menuBtn = document.getElementById("mobile-menu-btn");
+        // 1. Mobile Menu Toggle Logic
+        const menuBtn = document.getElementById("mobile-menu-btn");
         const navMenu = document.querySelector(".nav-menu");
         
-        if(menuBtn) {
+        if (menuBtn && navMenu) {
             menuBtn.addEventListener("click", function() {
                 navMenu.classList.toggle("active");
                 
                 // Icon Change (Hamburger to Cross)
                 const icon = menuBtn.querySelector('i');
-                if(navMenu.classList.contains('active')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-xmark');
-                } else {
-                    icon.classList.remove('fa-xmark');
-                    icon.classList.add('fa-bars');
+                if (icon) {
+                    if (navMenu.classList.contains('active')) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-xmark');
+                    } else {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    }
                 }
             });
         }
-    });
 
-        // Initialize Swipers
+        // 2. Initialize Hero Slider
         new Swiper(".heroSwiper", {
-            loop: true, autoplay: { delay: 4000 },
-            navigation: { nextEl: ".heroSwiper .swiper-button-next", prevEl: ".heroSwiper .swiper-button-prev" },
-            pagination: { el: ".heroSwiper .swiper-pagination", clickable: true },
+            loop: true,
+            autoplay: { delay: 4000 },
+            navigation: { 
+                nextEl: ".heroSwiper .swiper-button-next", 
+                prevEl: ".heroSwiper .swiper-button-prev" 
+            },
+            pagination: { 
+                el: ".heroSwiper .swiper-pagination", 
+                clickable: true 
+            },
         });
 
+        // 3. Swiper Configuration for Committees and Advisors
         var committeeOptions = {
             slidesPerView: 1, 
             spaceBetween: 20,
-            observer: true,       // Important to fix slider inside display:none elements
+            observer: true,       // স্লাইডার হাইড থাকলেও লোড হবে
             observeParents: true,
-            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            navigation: { 
+                nextEl: ".swiper-button-next", 
+                prevEl: ".swiper-button-prev" 
+            },
             breakpoints: { 
                 576: { slidesPerView: 2 }, 
                 768: { slidesPerView: 3 },
-                1024: { slidesPerView: 4 } // Show 4 on desktop
+                1024: { slidesPerView: 4 } // ডেস্কটপে ৪ জন দেখাবে
             }
         };
 
-        new Swiper(".committeeSwiper", committeeOptions);
-        new Swiper(".advisorSwiper", committeeOptions);
+        // Initialize general swipers
+        if (document.querySelector(".committeeSwiper")) {
+            new Swiper(".committeeSwiper", committeeOptions);
+        }
+        if (document.querySelector(".advisorSwiper")) {
+            new Swiper(".advisorSwiper", committeeOptions);
+        }
         
+        // 4. Initialize Branch Swipers (Team Leaders)
         var branchSwipers = document.querySelectorAll('.branchSwiper');
         branchSwipers.forEach(function(el) {
             new Swiper(el, committeeOptions);
         });
-    });
 
-    // Team Leader Filter functionality
+    }); // DOMContentLoaded ক্লোজ হলো এখানে
+
+    // 5. Team Leader Filter Functionality (এটা ইভেন্টের বাইরে থাকবে)
     function showBranchGroup(teamId) {
-        document.querySelectorAll('.branch-group').forEach(function(group) {
+        const groups = document.querySelectorAll('.branch-group');
+        groups.forEach(function(group) {
             group.style.display = 'none';
         });
-        document.getElementById(teamId).style.display = 'block';
+        const selectedGroup = document.getElementById(teamId);
+        if (selectedGroup) {
+            selectedGroup.style.display = 'block';
+            // সিলেক্ট করার পর স্লাইডার আপডেট করার জন্য
+            if (selectedGroup.swiper) {
+                selectedGroup.swiper.update();
+            }
+        }
     }
 </script>
 </body>
