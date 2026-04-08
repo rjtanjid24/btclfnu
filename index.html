@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>সিস্টেম আপগ্রেড চলছে – BTCLF NU</title>
+    <title>সিস্টেম সাময়িক বন্ধ – BTCLF NU</title>
     <link rel="icon" href="https://networknewsbd.com/nu/icon.jpg" sizes="32x32">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -15,6 +15,7 @@
 
         @font-face {
             font-family: 'July';
+            /* বেস ইউআরএল বা ডিরেক্ট লিংক ব্যবহার করতে পারেন */
             src: url('https://rjtanjid24.github.io/btclfnu/assets/fonts/July-Regular.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
@@ -38,14 +39,14 @@
             padding: 50px 40px;
             border-radius: 16px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-            max-width: 550px;
+            max-width: 600px;
             width: 90%;
-            border-top: 6px solid var(--accent-color);
+            border-top: 6px solid #e11d48; /* লাল বর্ডার দিয়ে একটু অ্যালার্ট ফিল দেওয়া হয়েছে */
             position: relative;
             overflow: hidden;
+            box-sizing: border-box;
         }
 
-        /* Background Pattern for Professional Look */
         .error-container::before {
             content: '';
             position: absolute;
@@ -70,7 +71,7 @@
 
         .icon-box {
             font-size: 60px;
-            color: var(--primary-color);
+            color: #e11d48;
             margin-bottom: 20px;
             position: relative;
             z-index: 1;
@@ -85,7 +86,7 @@
 
         h1 {
             color: var(--primary-color);
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin: 0 0 15px 0;
             font-weight: bold;
             position: relative;
@@ -102,15 +103,19 @@
         }
 
         .highlight-text {
-            background: #fefce8;
-            padding: 10px 15px;
-            border-left: 4px solid var(--accent-color);
-            border-radius: 4px;
-            font-size: 1.05rem;
-            color: #854d0e;
+            background: #fef2f2;
+            padding: 20px 25px;
+            border-left: 4px solid #e11d48;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            color: #991b1b;
             font-weight: bold;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
             display: inline-block;
+            line-height: 1.6;
+            text-align: justify;
+            position: relative;
+            z-index: 1;
         }
 
         .btn-twist {
@@ -129,6 +134,8 @@
             gap: 10px;
             position: relative;
             z-index: 1;
+            min-width: 250px;
+            justify-content: center;
         }
 
         .btn-twist:hover {
@@ -139,14 +146,27 @@
 
         .developer-credit {
             margin-top: 40px;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #94a3b8;
             position: relative;
             z-index: 1;
         }
 
-        .developer-credit i {
-            color: #e11d48;
+        .developer-credit a {
+            color: #64748b;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .developer-credit a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .error-container { padding: 40px 25px; }
+            h1 { font-size: 1.8rem; }
+            .highlight-text { font-size: 1.05rem; padding: 15px; }
         }
     </style>
 </head>
@@ -158,23 +178,23 @@
         </div>
 
         <div class="icon-box">
-            <i class="fa-solid fa-mug-hot"></i>
+            <i class="fa-solid fa-server"></i>
         </div>
 
         <h1>সিস্টেম কফি ব্রেকে আছে!</h1>
         
-        <p>অতিরিক্ত চাপ এবং পর্দার আড়ালের কারিগরদের নিরলস পরিশ্রমের পর সিস্টেমটি আপাতত একটু বিশ্রামে আছে।</p>
+        <p>অতিরিক্ত চাপ এবং পর্দার আড়ালের নিরলস পরিশ্রমের পর সিস্টেমটি আপাতত একটু বিশ্রামে আছে।</p>
 
         <div class="highlight-text">
-            <i class="fa-solid fa-lightbulb"></i> ভালো কাজের মূল্যায়ন এবং নতুন আপডেটের পর আমরা খুব শিগগিরই ফিরে আসব।
+            <i class="fa-solid fa-microchip" style="margin-right: 8px;"></i> স্বয়ংক্রিয় সিস্টেমের পেছনেও মানুষের স্বেচ্ছাশ্রম থাকে। যখন প্রযুক্তির সুবিধাগুলো মানুষের কাছে 'অধিকার' আর পেছনের শ্রমটা 'অদৃশ্য' হয়ে যায়, সার্ভারেরও তখন বিশ্রামের প্রয়োজন পড়ে।
         </div>
 
         <button class="btn-twist" onclick="twistAction()">
-            <i class="fa-solid fa-rotate-right"></i> বারবার চেক করুন
+            <i class="fa-solid fa-arrow-rotate-right"></i> আবার চেষ্টা করুন
         </button>
 
         <div class="developer-credit">
-            Developed with <i class="fa-solid fa-heart"></i> & Code by RJ Tanjid
+            System Architecture by <a href="#" target="_blank">No One?</a>
         </div>
     </div>
 
@@ -185,15 +205,19 @@
             const btn = document.querySelector('.btn-twist');
             
             if(clickCount === 1) {
-                btn.innerHTML = '<i class="fa-solid fa-face-smile-wink"></i> বললাম না, কাজ চলছে!';
+                btn.innerHTML = '<i class="fa-solid fa-download"></i> কফি শেষ হলেই ফিরে আসছি!';
                 btn.style.background = '#ca8a04';
             } else if(clickCount === 2) {
-                btn.innerHTML = '<i class="fa-solid fa-hand-holding-hand"></i> ডেভেলপারের খবর নিন!';
+                btn.innerHTML = '<i class="fa-solid fa-hand-sparkles"></i> বিনা পরিশ্রমে সব মেলে না!';
                 btn.style.background = '#059669';
+            } else if(clickCount === 3) {
+                btn.innerHTML = '<i class="fa-solid fa-face-rolling-eyes"></i> ডেভেলপারকে কফি অফার করুন!';
+                btn.style.background = '#e11d48';
             } else {
-                btn.innerHTML = '<i class="fa-solid fa-hourglass-half"></i> অপেক্ষা করুন...';
-                btn.style.background = '#0b3d91';
-                clickCount = 0; // Reset
+                btn.innerHTML = '<i class="fa-solid fa-ban"></i> বারবার ক্লিক করলেও লাভ নেই...';
+                btn.style.background = '#475569';
+                btn.disabled = true;
+                btn.style.cursor = 'not-allowed';
             }
         }
     </script>
