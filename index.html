@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>সিস্টেম সাময়িক বন্ধ – BTCLF NU</title>
+    <title>সিস্টেম সাময়িক বন্ধ – BTCLF NU</title>
     <link rel="icon" href="https://networknewsbd.com/nu/icon.jpg" sizes="32x32">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -15,7 +15,6 @@
 
         @font-face {
             font-family: 'July';
-            /* বেস ইউআরএল বা ডিরেক্ট লিংক ব্যবহার করতে পারেন */
             src: url('https://rjtanjid24.github.io/btclfnu/assets/fonts/July-Regular.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
@@ -41,7 +40,7 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.05);
             max-width: 600px;
             width: 90%;
-            border-top: 6px solid #e11d48; /* লাল বর্ডার দিয়ে একটু অ্যালার্ট ফিল দেওয়া হয়েছে */
+            border-top: 6px solid #d97706; /* কফি/ওয়ার্ম থিমের সাথে মিলিয়ে অ্যাম্বার কালার */
             position: relative;
             overflow: hidden;
             box-sizing: border-box;
@@ -71,7 +70,7 @@
 
         .icon-box {
             font-size: 60px;
-            color: #e11d48;
+            color: #d97706; /* কফি ব্রেকের সাথে সামঞ্জস্যপূর্ণ কালার */
             margin-bottom: 20px;
             position: relative;
             z-index: 1;
@@ -103,12 +102,12 @@
         }
 
         .highlight-text {
-            background: #fef2f2;
+            background: #fffbeb;
             padding: 20px 25px;
-            border-left: 4px solid #e11d48;
+            border-left: 4px solid #d97706;
             border-radius: 8px;
             font-size: 1.1rem;
-            color: #991b1b;
+            color: #92400e;
             font-weight: bold;
             margin-bottom: 35px;
             display: inline-block;
@@ -178,7 +177,7 @@
         </div>
 
         <div class="icon-box">
-            <i class="fa-solid fa-server"></i>
+            <i class="fa-solid fa-mug-hot"></i>
         </div>
 
         <h1>সিস্টেম কফি ব্রেকে আছে!</h1>
@@ -186,7 +185,7 @@
         <p>অতিরিক্ত চাপ এবং পর্দার আড়ালের নিরলস পরিশ্রমের পর সিস্টেমটি আপাতত একটু বিশ্রামে আছে।</p>
 
         <div class="highlight-text">
-            <i class="fa-solid fa-microchip" style="margin-right: 8px;"></i> স্বয়ংক্রিয় সিস্টেমের পেছনেও মানুষের স্বেচ্ছাশ্রম থাকে। যখন প্রযুক্তির সুবিধাগুলো মানুষের কাছে 'অধিকার' আর পেছনের শ্রমটা 'অদৃশ্য' হয়ে যায়, সার্ভারেরও তখন বিশ্রামের প্রয়োজন পড়ে।
+            <i class="fa-solid fa-microchip" style="margin-right: 8px;"></i> স্বয়ংক্রিয় সিস্টেমের পেছনেও মানুষের স্বেচ্ছাশ্রম থাকে। যখন প্রযুক্তির সুবিধাগুলো মানুষের কাছে 'অধিকার' আর পেছনের শ্রমটা 'অদৃশ্য' হয়ে যায়, সার্ভারেরও তখন বিশ্রামের প্রয়োজন পড়ে।
         </div>
 
         <button class="btn-twist" onclick="twistAction()">
@@ -194,7 +193,7 @@
         </button>
 
         <div class="developer-credit">
-            System Architecture by <a href="#" target="_blank">No One?</a>
+            System Architecture by <a href="https://rjtanjid24.github.io/me" target="_blank">No One?</a>
         </div>
     </div>
 
@@ -205,13 +204,13 @@
             const btn = document.querySelector('.btn-twist');
             
             if(clickCount === 1) {
-                btn.innerHTML = '<i class="fa-solid fa-download"></i> কফি শেষ হলেই ফিরে আসছি!';
-                btn.style.background = '#ca8a04';
+                btn.innerHTML = '<i class="fa-solid fa-mug-hot"></i> কফি শেষ হলেই ফিরে আসছি!';
+                btn.style.background = '#d97706';
             } else if(clickCount === 2) {
-                btn.innerHTML = '<i class="fa-solid fa-hand-sparkles"></i> বিনা পরিশ্রমে সব মেলে না!';
+                btn.innerHTML = '<i class="fa-solid fa-wand-magic-sparkles"></i> বিনা পরিশ্রমে সব মেলে না!';
                 btn.style.background = '#059669';
             } else if(clickCount === 3) {
-                btn.innerHTML = '<i class="fa-solid fa-face-rolling-eyes"></i> ডেভেলপারকে কফি অফার করুন!';
+                btn.innerHTML = '<i class="fa-solid fa-hand-holding-dollar"></i> ডেভেলপারকে কফি অফার করুন!';
                 btn.style.background = '#e11d48';
             } else {
                 btn.innerHTML = '<i class="fa-solid fa-ban"></i> বারবার ক্লিক করলেও লাভ নেই...';
