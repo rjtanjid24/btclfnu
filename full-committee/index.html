@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সিস্টেম সাময়িক বন্ধ – BTCLF NU</title>
+    <link rel="icon" href="https://networknewsbd.com/nu/icon.jpg" sizes="32x32">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0b3d91; 
+            --accent-color: #fbd914;  
+        }
+
+        @font-face {
+            font-family: 'July';
+            src: url('https://rjtanjid24.github.io/btclfnu/assets/fonts/July-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'July', sans-serif;
+            background-color: #f1f5f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .error-container {
+            background: #ffffff;
+            padding: 50px 40px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            max-width: 600px;
+            width: 90%;
+            border-top: 6px solid #d97706; /* কফি/ওয়ার্ম থিমের সাথে মিলিয়ে অ্যাম্বার কালার */
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .error-container::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: rgba(11, 61, 145, 0.03);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .logo-wrap {
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-wrap img {
+            max-height: 70px;
+        }
+
+        .icon-box {
+            font-size: 60px;
+            color: #d97706; /* কফি ব্রেকের সাথে সামঞ্জস্যপূর্ণ কালার */
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin: 0 0 15px 0;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+        }
+
+        p {
+            color: #475569;
+            font-size: 1.15rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .highlight-text {
+            background: #fffbeb;
+            padding: 20px 25px;
+            border-left: 4px solid #d97706;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            color: #92400e;
+            font-weight: bold;
+            margin-bottom: 35px;
+            display: inline-block;
+            line-height: 1.6;
+            text-align: justify;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-twist {
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            z-index: 1;
+            min-width: 250px;
+            justify-content: center;
+        }
+
+        .btn-twist:hover {
+            background: #082d6b;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(11, 61, 145, 0.2);
+        }
+
+        .developer-credit {
+            margin-top: 40px;
+            font-size: 0.95rem;
+            color: #94a3b8;
+            position: relative;
+            z-index: 1;
+        }
+
+        .developer-credit a {
+            color: #64748b;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .developer-credit a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .error-container { padding: 40px 25px; }
+            h1 { font-size: 1.8rem; }
+            .highlight-text { font-size: 1.05rem; padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="error-container">
+        <div class="logo-wrap">
+            <img src="https://networknewsbd.com/nu/logo_h.jpg" alt="BTCLF NU">
+        </div>
+
+        <div class="icon-box">
+            <i class="fa-solid fa-mug-hot"></i>
+        </div>
+
+        <h1>সিস্টেম কফি ব্রেকে আছে!</h1>
+        
+        <p>অতিরিক্ত চাপ এবং পর্দার আড়ালের নিরলস পরিশ্রমের পর সিস্টেমটি আপাতত একটু বিশ্রামে আছে।</p>
+
+        <div class="highlight-text">
+            <i class="fa-solid fa-microchip" style="margin-right: 8px;"></i> স্বয়ংক্রিয় সিস্টেমের পেছনেও মানুষের স্বেচ্ছাশ্রম থাকে। যখন প্রযুক্তির সুবিধাগুলো মানুষের কাছে 'অধিকার' আর পেছনের শ্রমটা 'অদৃশ্য' হয়ে যায়, সার্ভারেরও তখন বিশ্রামের প্রয়োজন পড়ে।
+        </div>
+
+        <button class="btn-twist" onclick="twistAction()">
+            <i class="fa-solid fa-arrow-rotate-right"></i> আবার চেষ্টা করুন
+        </button>
+
+        <div class="developer-credit">
+            System Architecture by <a href="https://rjtanjid24.github.io/me" target="_blank">No One?</a>
+        </div>
+    </div>
+
+    <script>
+        let clickCount = 0;
+        function twistAction() {
+            clickCount++;
+            const btn = document.querySelector('.btn-twist');
+            
+            if(clickCount === 1) {
+                btn.innerHTML = '<i class="fa-solid fa-mug-hot"></i> কফি শেষ হলেই ফিরে আসছি!';
+                btn.style.background = '#d97706';
+            } else if(clickCount === 2) {
+                btn.innerHTML = '<i class="fa-solid fa-wand-magic-sparkles"></i> বিনা পরিশ্রমে সব মেলে না!';
+                btn.style.background = '#059669';
+            } else if(clickCount === 3) {
+                btn.innerHTML = '<i class="fa-solid fa-hand-holding-dollar"></i> ডেভেলপারকে কফি অফার করুন!';
+                btn.style.background = '#e11d48';
+            } else {
+                btn.innerHTML = '<i class="fa-solid fa-ban"></i> বারবার ক্লিক করলেও লাভ নেই...';
+                btn.style.background = '#475569';
+                btn.disabled = true;
+                btn.style.cursor = 'not-allowed';
+            }
+        }
+    </script>
+
+</body>
+</html>
