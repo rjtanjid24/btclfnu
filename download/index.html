@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>সিস্টেম আপগ্রেড চলছে – BTCLF NU</title>
+    <title>ডাউনলোড আর্কাইভ সাময়িক বন্ধ – BTCLF NU</title>
     <link rel="icon" href="https://networknewsbd.com/nu/icon.jpg" sizes="32x32">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
             --primary-color: #0b3d91; 
-            --accent-color: #fbd914;  
+            --accent-color: #fbd914;
+            --text-main: #334155;
+            --text-muted: #64748b;
         }
 
         @font-face {
@@ -23,177 +25,201 @@
 
         body {
             font-family: 'July', sans-serif;
-            background-color: #f1f5f9;
+            background-color: #f8fafc;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            text-align: center;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
         }
 
-        .error-container {
+        .archive-card {
             background: #ffffff;
-            padding: 50px 40px;
-            border-radius: 16px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-            max-width: 550px;
+            padding: 50px 45px;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+            max-width: 600px;
             width: 90%;
-            border-top: 6px solid var(--accent-color);
+            border-top: 5px solid #d97706; /* Amber color for maintenance warning */
+            text-align: center;
             position: relative;
-            overflow: hidden;
+            box-sizing: border-box;
         }
 
-        /* Background Pattern for Professional Look */
-        .error-container::before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 150px;
-            height: 150px;
-            background: rgba(11, 61, 145, 0.03);
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .logo-wrap {
-            margin-bottom: 25px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .logo-wrap img {
-            max-height: 70px;
-        }
-
-        .icon-box {
-            font-size: 60px;
-            color: var(--primary-color);
+        .logo-box {
             margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-            animation: float 3s ease-in-out infinite;
         }
 
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+        .logo-box img {
+            max-height: 65px;
+            opacity: 0.9;
+        }
+
+        .icon-wrapper {
+            width: 90px;
+            height: 90px;
+            background: #fef3c7;
+            color: #d97706;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            margin: 0 auto 25px auto;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 15px rgba(217, 119, 6, 0.15);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
         h1 {
             color: var(--primary-color);
             font-size: 2rem;
-            margin: 0 0 15px 0;
+            margin: 0 0 10px 0;
             font-weight: bold;
-            position: relative;
-            z-index: 1;
         }
 
-        p {
-            color: #475569;
-            font-size: 1.15rem;
+        .cover-story {
+            color: var(--text-muted);
+            font-size: 1.1rem;
             line-height: 1.6;
             margin-bottom: 30px;
+        }
+
+        /* The Philosophical Jab Box */
+        .system-note {
+            background: #f1f5f9;
+            padding: 25px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 0 8px 8px 0;
+            font-size: 1.15rem;
+            color: var(--text-main);
+            margin-bottom: 35px;
+            text-align: justify;
+            line-height: 1.7;
             position: relative;
-            z-index: 1;
         }
 
-        .highlight-text {
-            background: #fefce8;
-            padding: 10px 15px;
-            border-left: 4px solid var(--accent-color);
-            border-radius: 4px;
-            font-size: 1.05rem;
-            color: #854d0e;
-            font-weight: bold;
-            margin-bottom: 30px;
-            display: inline-block;
+        .system-note i {
+            color: var(--primary-color);
+            margin-right: 8px;
+            font-size: 1.2rem;
+            opacity: 0.8;
         }
 
-        .btn-twist {
+        .btn-check {
             background: var(--primary-color);
             color: #fff;
             border: none;
-            padding: 15px 30px;
-            border-radius: 30px;
+            padding: 16px 35px;
+            border-radius: 8px;
             font-size: 1.1rem;
             font-weight: bold;
             cursor: pointer;
-            transition: 0.3s;
+            transition: all 0.3s ease;
             font-family: inherit;
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            position: relative;
-            z-index: 1;
+            width: 100%;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(11, 61, 145, 0.15);
         }
 
-        .btn-twist:hover {
+        .btn-check:hover {
             background: #082d6b;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(11, 61, 145, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(11, 61, 145, 0.25);
         }
 
-        .developer-credit {
-            margin-top: 40px;
+        .footer-credit {
+            margin-top: 35px;
             font-size: 0.9rem;
             color: #94a3b8;
-            position: relative;
-            z-index: 1;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 20px;
         }
 
-        .developer-credit i {
-            color: #e11d48;
+        .footer-credit a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        
+        .footer-credit a:hover {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 768px) {
+            .archive-card { padding: 40px 25px; }
+            h1 { font-size: 1.7rem; }
+            .system-note { font-size: 1.05rem; padding: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="error-container">
-        <div class="logo-wrap">
+    <div class="archive-card">
+        <div class="logo-box">
             <img src="https://networknewsbd.com/nu/logo_h.jpg" alt="BTCLF NU">
         </div>
 
-        <div class="icon-box">
-            <i class="fa-solid fa-mug-hot"></i>
+        <div class="icon-wrapper">
+            <i class="fa-solid fa-box-archive"></i>
         </div>
 
-        <h1>সিস্টেম কফি ব্রেকে আছে!</h1>
+        <h1>আর্কাইভ রক্ষণাবেক্ষণ চলছে</h1>
         
-        <p>অতিরিক্ত চাপ এবং পর্দার আড়ালের কারিগরদের নিরলস পরিশ্রমের পর সিস্টেমটি আপাতত একটু বিশ্রামে আছে।</p>
+        <p class="cover-story">সিস্টেমের স্টোরেজ অপ্টিমাইজেশন এবং ডেটা সিকিউরিটি আপগ্রেডের জন্য সরাসরি ডাউনলোড ডিরেক্টরিটি সাময়িকভাবে বন্ধ রাখা হয়েছে।</p>
 
-        <div class="highlight-text">
-            <i class="fa-solid fa-lightbulb"></i> ভালো কাজের মূল্যায়ন এবং নতুন আপডেটের পর আমরা খুব শিগগিরই ফিরে আসব।
+        <div class="system-note">
+            <i class="fa-solid fa-quote-left"></i> প্রস্তুত করা জিনিস ব্যবহার করা খুব সহজ, কিন্তু তা তৈরি করা ততটাই কঠিন। নেপথ্যের কারিগরদের উৎসাহে ভাটা পড়লে, সবচেয়ে আধুনিক সিস্টেমটিও সাময়িক বিরতিতে যেতে বাধ্য হয়।
         </div>
 
-        <button class="btn-twist" onclick="twistAction()">
-            <i class="fa-solid fa-rotate-right"></i> বারবার চেক করুন
+        <button class="btn-check" id="actionBtn" onclick="handleTwist()">
+            <i class="fa-solid fa-rotate"></i> সার্ভার স্ট্যাটাস চেক করুন
         </button>
 
-        <div class="developer-credit">
-            Developed with <i class="fa-solid fa-heart"></i> & Code by RJ Tanjid
+        <div class="footer-credit">
+            System Architecture Managed by <a href="https://rjtanjid24.github.io/me" target="_blank">RJ Tanjid</a>
         </div>
     </div>
 
     <script>
         let clickCount = 0;
-        function twistAction() {
+        
+        function handleTwist() {
             clickCount++;
-            const btn = document.querySelector('.btn-twist');
+            const btn = document.getElementById('actionBtn');
             
-            if(clickCount === 1) {
-                btn.innerHTML = '<i class="fa-solid fa-face-smile-wink"></i> বললাম না, কাজ চলছে!';
-                btn.style.background = '#ca8a04';
-            } else if(clickCount === 2) {
-                btn.innerHTML = '<i class="fa-solid fa-hand-holding-hand"></i> ডেভেলপারের খবর নিন!';
-                btn.style.background = '#059669';
-            } else {
-                btn.innerHTML = '<i class="fa-solid fa-hourglass-half"></i> অপেক্ষা করুন...';
-                btn.style.background = '#0b3d91';
-                clickCount = 0; // Reset
+            if (clickCount === 1) {
+                btn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i> ফাইল খুঁজছেন? সিস্টেম ঘুমাচ্ছে!';
+                btn.style.background = '#d97706'; // Amber
+            } 
+            else if (clickCount === 2) {
+                btn.innerHTML = '<i class="fa-solid fa-lightbulb"></i> অটোমেশন এমনি এমনি চলে না!';
+                btn.style.background = '#059669'; // Emerald Green
+            } 
+            else if (clickCount === 3) {
+                btn.innerHTML = '<i class="fa-solid fa-handshake-angle"></i> বারবার ক্লিক করলেও লাভ নেই...';
+                btn.style.background = '#e11d48'; // Rose Red
+            } 
+            else {
+                btn.innerHTML = '<i class="fa-solid fa-lock"></i> অ্যাক্সেস ডিনাইড (Access Denied)';
+                btn.style.background = '#475569'; // Slate Gray
+                btn.style.cursor = 'not-allowed';
+                btn.style.transform = 'none';
+                btn.style.boxShadow = 'none';
+                btn.disabled = true;
             }
         }
     </script>
